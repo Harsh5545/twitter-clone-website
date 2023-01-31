@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { FaTwitter } from "react-icons/fa";
-import { FaHouseUser, FaHashtag } from "react-icons/fa";
+import { FaHouseUser, FaHashtag, FaNotification } from "react-icons/fa";
+// import { GrNotification } from "react-icons/gr";
 import { BsBookmark, BsPerson } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { TbFileText } from "react-icons/tb";
@@ -16,25 +17,18 @@ import CustomButton2 from "../../../Atom/Button/CustomButton2";
 import DialogBox from "../../Dialog/DialogBox";
 import { useNavigate } from "react-router-dom";
 
+
 function LeftSec() {
   const nevigate = useNavigate();
   let Data = JSON.parse(localStorage.getItem("user0"));
   const menu = [
-    {
-      id: 1,
-      icon: <FaHouseUser />,
-      Name: <p onClick={() => nevigate("/")}>Home</p>,
-    },
+    { id: 1, icon: <FaHouseUser />, Name: <p onClick={()=> nevigate("/") }>Home</p> },
     { id: 2, icon: <FaHashtag />, Name: "Explore" },
     { id: 3, icon: <VscBellDot />, Name: "Notifications" },
     { id: 4, icon: <HiOutlineMail />, Name: "Message" },
     { id: 5, icon: <BsBookmark />, Name: "Bookmarks" },
     { id: 6, icon: <TbFileText />, Name: "Lists" },
-    {
-      id: 7,
-      icon: <BsPerson />,
-      Name: <p onClick={() => nevigate("/Profile")}>Profile</p>,
-    },
+    { id: 7, icon: <BsPerson />, Name: <p onClick={()=> nevigate("/Profile") }>Profile</p> },
     { id: 8, icon: <CgMoreO />, Name: "More" },
   ];
   const [isOpen, SetisOpen] = useState(false);
@@ -58,16 +52,14 @@ function LeftSec() {
         <div className={style.innerContainer}>
           <div className={style.innerContainer2}>
             <div className={style.logo}>
-              <p onClick={() => nevigate("/")}>
-                {" "}
-                <FaTwitter />
-              </p>
+             
+              <p onClick={()=> nevigate("/") }> <FaTwitter /></p>
             </div>
 
-            {menu.map((menu, index) => {
+            {menu.map((menu,index) => {
               return (
                 <div className={style.sidebar} key={index}>
-                  <div className={style.sidebarOption}>
+                  <div className={style.sidebarOption} >
                     <h2>{menu.icon}</h2>
                     <span>{menu.Name}</span>
                   </div>
