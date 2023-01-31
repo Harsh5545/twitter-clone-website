@@ -85,6 +85,7 @@ function Login() {
                   <Input
                     className={style.input2}
                     placeholder="passsword"
+                    type="password"
                     handleOnchange={passWordChangeValue}
                   />
                 </div>
