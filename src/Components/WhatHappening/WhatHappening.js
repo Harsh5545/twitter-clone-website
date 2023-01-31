@@ -17,7 +17,7 @@ function WhatHappening() {
   // const[forTrue,setForTrue]=useState(0)
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const inputRef = useRef(null);
-
+  let Data = JSON.parse(localStorage.getItem("user0"));
   const Icons = [
     { id: 0, icon: <FaGlobe /> },
     { id: 1, icon: <FaImage />, action: "pickImage" },
@@ -42,14 +42,13 @@ function WhatHappening() {
     let reader = new FileReader();
     reader.onload = (e) => {
       setImage(e.target.result);
-      inputRef.current = null;
     };
     reader.readAsDataURL(e.target.files[0]);
   }
   function handleNewTweet() {
     let newObj = {
-      name: "Profile Name",
-      handlerName: "@Profile Handler",
+      name: Data.Name,
+      handlerName: Data.Email,
       organization: "United States government organization",
       tweetText: storeArray,
       tweetPic: image,
@@ -67,6 +66,7 @@ function WhatHappening() {
     // setForTrue(forTrue+1)
     setLoginStatus(loginStatus + 1);
     setImage("");
+    inputRef.current.value = "";
   }
 
   return (

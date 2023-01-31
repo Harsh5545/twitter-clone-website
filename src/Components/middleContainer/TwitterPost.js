@@ -20,6 +20,19 @@ export default function TwitterPost() {
   const nevigate = useNavigate();
   const [newPost, setNewPost] = useRecoilState(isTweetPost);
   const [newProfile, setNewProfile] = useRecoilState(userProfile);
+
+  const [likesCount, setLikesCount] = useState(1000);
+  const [icon, setIcon] = useState("blue");
+
+  function handleLike() {
+    likesCount === 1000 ? setLikesCount(1001) : setLikesCount(1000);
+    if (likesCount === 1000) {
+      setIcon("red");
+    } else {
+      setIcon("blue");
+    }
+  }
+
   useEffect(() => {
     fetchData();
   }, [newPost]);
@@ -37,7 +50,7 @@ export default function TwitterPost() {
     <>
       {post.map((data) => {
         return (
-          <div className={style.wrapper} key={data.id}>
+          <div className={style.wrapper}>
             <div className={style.container1}>
               <div
                 onClick={() =>
@@ -68,8 +81,8 @@ export default function TwitterPost() {
                     <VerifiedIcon style={{ color: "blue" }} />
                   </h3>
                 </span>
-                <h4 className={style.handlerName}>{data.handlerName}</h4>
-                <h4 className={style.handlerName2}>{data.tweetText}</h4>
+                <h4>{data.handlerName}</h4>
+                <h4>{data.tweetText}</h4>
               </div>
             </div>
 
@@ -85,24 +98,34 @@ export default function TwitterPost() {
               />
             </div>
             <div className={style.icons}>
-              <span>
+              <div className={style.icons}>
                 {data.tweetCount}
                 <ChatBubbleOutlineIcon />
-              </span>
-              <span>
+              </div>
+              <div className={style.icons}>
                 {data.retweetCount}
                 <SyncIcon />
-              </span>
-              <span>
-                {data.likesCount}
-                <FavoriteBorderIcon />
-              </span>
-              <span>
+              </div>
+              <div className={style.icons}>
+                <p
+                  style={{
+                    border: "none",
+                    background: "none",
+                    color: " rgb(102, 102, 192)",
+                  }}
+                  onClick={handleLike}
+                >
+                  <FavoriteBorderIcon style={{ color: icon }} />
+                </p>
+                {likesCount}
+              </div>
+              <div className={style.icons}>
                 {data.viewsCount}
                 <PollIcon />
-              </span>
-
-              <UploadIcon />
+              </div>
+              <div>
+                <UploadIcon />
+              </div>
             </div>
           </div>
         );
