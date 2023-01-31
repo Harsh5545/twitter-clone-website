@@ -1,1017 +1,984 @@
 export const tweetPosts = [
-  {
-    id: 0,
-    name: "Dwayne Johnson",
-    handlerName: "@The RocK",
-    organization: " American actor and former professional wrestler",
-    tweetText:
-      "  Johnson wrestled for the WWF for eight years prior to pursuing an acting career. His films have grossed over $3.5 billion in North America and over $10.5 billion worldwide ",
-    tweetPic:
-      "https://talksport.com/wp-content/uploads/sites/5/2021/11/the-rock.jpeg?strip=all&w=960&quality=40",
+    {
+       id:0,
+        name  : 'Dwayne Johnson',
+        handlerName : '@The RocK' ,
+        organization : ' American actor and former professional wrestler',
+        tweetText : '  Johnson wrestled for the WWF for eight years prior to pursuing an acting career. His films have grossed over $3.5 billion in North America and over $10.5 billion worldwide ',
+        tweetPic : 'https://talksport.com/wp-content/uploads/sites/5/2021/11/the-rock.jpeg?strip=all&w=960&quality=40',
+      
+        tweetCount : 100,
+        retweetCount : 100 ,
+        likesCount : 100,
+        followers : 200,
+        followings : 400,
+        joinedDate : '22 dec 2022',
+        tweets : [
+            {
+                id:0,
+                tweetText : ' Johnson wrestled for the WWF for eight years prior to pursuing an acting career. His films have grossed over $3.5 billion in North America and over $10.5 billion worldwide ',
+                tweetPic : ' https://talksport.com/wp-content/uploads/sites/5/2021/11/the-rock.jpeg?strip=all&w=960&quality=40',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                       
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
 
-    tweetCount: 100,
-    retweetCount: 100,
-    likesCount: 100,
-    followers: 200,
-    followings: 400,
-    joinedDate: "22 dec 2022",
-    tweets: [
-      {
-        id: 0,
-        tweetText:
-          " Johnson wrestled for the WWF for eight years prior to pursuing an acting career. His films have grossed over $3.5 billion in North America and over $10.5 billion worldwide ",
-        tweetPic:
-          " https://talksport.com/wp-content/uploads/sites/5/2021/11/the-rock.jpeg?strip=all&w=960&quality=40",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-        ],
-      },
-      {
-        id: 1,
-        tweetText:
-          "Johnson wrestled for the WWF for eight years prior to pursuing an acting career. His films have grossed over $3.5 billion in North America and over $10.5 billion worldwide  ",
-        tweetPic:
-          " https://www.koimoi.com/wp-content/new-galleries/2022/07/dwayne-johnson-wants-to-take-over-wwe-01.jpg",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 1,
-    name: "Gal Gadot",
-    handlerName: "@Wonder women",
-    organization: "",
-    tweetText:
-      " Wonder Woman is an Amazon, a race of female warriors in Greek mythology. For the purpose of the Wonder Woman character, it was the Greek gods who gave her her powers.",
-    tweetPic:
-      "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F12%2Fww-2000.jpg",
-    tweetCount: 200,
-    retweetCount: 200,
-    likesCount: 200,
-    viewsCount: "10k",
-    hastags: ["#wildLife", "#photoGraphy"],
-    followers: 200,
-    followings: 400,
-    joinedDate: "22 dec 2022",
-    tweets: [
-      {
-        tweetText:
-          " Wonder Woman is an Amazon, a race of female warriors in Greek mythology. For the purpose of the Wonder Woman character, it was the Greek gods who gave her her powers.",
+                ]
+            },
+            {
+                id:1,
+                tweetText : 'Johnson wrestled for the WWF for eight years prior to pursuing an acting career. His films have grossed over $3.5 billion in North America and over $10.5 billion worldwide  ',
+                tweetPic : ' https://www.koimoi.com/wp-content/new-galleries/2022/07/dwayne-johnson-wants-to-take-over-wwe-01.jpg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
 
-        tweetPic:
-          "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F12%2Fww-2000.jpg",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-        ],
-      },
-      {
-        tweetText:
-          " Wonder Woman is an Amazon, a race of female warriors in Greek mythology. For the purpose of the Wonder Woman character, it was the Greek gods who gave her her powers.",
-        tweetPic:
-          "https://i.pinimg.com/originals/05/65/df/0565df3bca2bf4b5a8f9bca881a8c799.jpg",
+                ]
+            }
+        ]
+    },
+    {
+        id:1,
+        name : 'Gal Gadot',
+        handlerName : '@Wonder women',
+        organization : '',
+        tweetText : ' Wonder Woman is an Amazon, a race of female warriors in Greek mythology. For the purpose of the Wonder Woman character, it was the Greek gods who gave her her powers.',
+        tweetPic : 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F12%2Fww-2000.jpg' ,
+        tweetCount : 200,
+        retweetCount : 200 ,
+        likesCount : 200,
+        viewsCount : '10k',
+        hastags : ['#wildLife','#photoGraphy'],
+        followers : 200,
+        followings : 400,
+        joinedDate : '22 dec 2022',
+        tweets : [
+            {
+                tweetText : ' Wonder Woman is an Amazon, a race of female warriors in Greek mythology. For the purpose of the Wonder Woman character, it was the Greek gods who gave her her powers.',
 
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: "AB de Villiers",
-    handlerName: "@Mr360*",
-    organization: "",
-    tweetText: "South African cricketer ",
-    tweetPic:
-      "https://w0.peakpx.com/wallpaper/392/642/HD-wallpaper-abd-rcb.jpg ",
-    tweetCount: 700,
-    retweetCount: 700,
-    likesCount: 900,
-    viewsCount: "100k",
-    refLink: "https://www.globalwildlife.org/blog/",
-    followers: 200,
-    followings: 400,
-    joinedDate: "22 dec 2022",
-    tweets: [
-      {
-        tweetText:
-          " proven credentials in all conditions, pressure situations, and across all formats, AB de Villiers is arguably the most complete batsman of his generation. ",
-        tweetPic:
-          "https://qph.cf2.quoracdn.net/main-qimg-e809312da0bd0af0fd1437ef148fb2d5-lq",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-        ],
-      },
-      {
-        tweetText:
-          "With proven credentials in all conditions, pressure situations, and across all formats, AB de Villiers is arguably the most complete batsman of his generation.",
-        tweetPic:
-          "https://m.cricbuzz.com/a/img/v1/600x400/i1/c118941/ab-de-villiers-arrived-in-indore-with-3-fours-and-9-sixes.jpg",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: "Surya Kumar Yadav",
-    handlerName: "@Surya",
-    organization: "",
-    tweetText:
-      " टीम इंडिया के विस्फोटक बल्लेबाज सूर्यकुमार यादव ने आज यूपी के मुख्यमंत्री योगी आदित्यनाथ से मुलाकात की.  #Lucknow #UttarPradesh #TeamIndia #INDvsNZ #Trending  ",
-    tweetPic:
-      "https://pbs.twimg.com/media/FntC8KcaAAIb7ox?format=jpg&name=medium",
+                tweetPic : 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F12%2Fww-2000.jpg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
 
-    tweetCount: 400,
-    retweetCount: 327,
-    likesCount: 90,
-    viewsCount: "7k",
-    hastags: ["#sports", "#Winners"],
-    followers: 200,
-    followings: 400,
-    joinedDate: "22 dec 2022",
-    tweets: [
-      {
-        tweetText:
-          " Suryakumar Ashok Yadav, also known as SKY, is an Indian international cricketer who plays for the Indian cricket team.  ",
-        tweetPic:
-          " https://resources.pulse.icc-cricket.com/ICC/photo/2022/08/15/9891ff6b-2407-4e5e-997c-77419e168b94/GettyImages-1241824431.jpg",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
+                ]
+            },
+            {
+                tweetText : ' Wonder Woman is an Amazon, a race of female warriors in Greek mythology. For the purpose of the Wonder Woman character, it was the Greek gods who gave her her powers.',
+                tweetPic : 'https://i.pinimg.com/originals/05/65/df/0565df3bca2bf4b5a8f9bca881a8c799.jpg',
+                
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+
+                ]
+            }
         ],
-      },
-      {
-        tweetText:
-          " Suryakumar Ashok Yadav, also known as SKY, is an Indian international cricketer who plays for the Indian cricket team.  ",
-        tweetPic: " https://p.imgci.com/db/PICTURES/CMS/343500/343568.jpg",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
+    },
+    {
+        id:2,
+        name : 'AB de Villiers',
+        handlerName : '@Mr360*',
+        organization : '',
+        tweetText : 'South African cricketer ',
+        tweetPic : 'https://w0.peakpx.com/wallpaper/392/642/HD-wallpaper-abd-rcb.jpg ',
+        tweetCount : 700,
+        retweetCount : 700 ,
+        likesCount : 900,
+        viewsCount : '100k',
+        refLink : 'https://www.globalwildlife.org/blog/',
+        followers : 200,
+        followings : 400,
+        joinedDate : '22 dec 2022',
+        tweets : [
+            {
+                tweetText : ' proven credentials in all conditions, pressure situations, and across all formats, AB de Villiers is arguably the most complete batsman of his generation. ',
+                tweetPic : 'https://qph.cf2.quoracdn.net/main-qimg-e809312da0bd0af0fd1437ef148fb2d5-lq',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+
+                ]
+            },
+            {
+                tweetText : 'With proven credentials in all conditions, pressure situations, and across all formats, AB de Villiers is arguably the most complete batsman of his generation.',
+                tweetPic :'https://m.cricbuzz.com/a/img/v1/600x400/i1/c118941/ab-de-villiers-arrived-in-indore-with-3-fours-and-9-sixes.jpg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+
+                ]
+            }
         ],
-      },
-    ],
-  },
-  {
-    id: 4,
-    name: "Motu-paTlu",
-    handlerName: "@MotuPatlu",
-    organization: "",
-    tweetText:
-      " Best friends Motu and Patlu live in Furfuri Nagar and always fall into trouble. To get out of those problems, often due to Motus clumsy actions, they eventually get help from their other friends. ",
-    tweetPic:
-      " http://cdn.shopify.com/s/files/1/0527/0795/0750/collections/Motu-patlu.jpg?v=1659161477",
-    tweetCount: 650,
-    retweetCount: 699,
-    likesCount: 900,
-    viewsCount: "17k",
-    hastags: ["#samoshlover", "#cartoon", "# Indian"],
-    followers: 200,
-    followings: 400,
-    joinedDate: "22 dec 2022",
-    tweets: [
-      {
-        tweetText:
-          " Best friends Motu and Patlu live in Furfuri Nagar and always fall into trouble. To get out of those problems, often due to Motus clumsy actions, they eventually get help from their other friends. ",
-        tweetPic:
-          "https://m.media-amazon.com/images/M/MV5BODY4Y2UyODUtYjkzNC00NmZlLWEzNWYtMTAxYmIzNGVlYmVkXkEyXkFqcGdeQXVyODAzNzAwOTU@.V1.jpg",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
+    },
+    {
+        id:3,
+        name : 'Surya Kumar Yadav',
+        handlerName : '@Surya',
+        organization : '',
+        tweetText : ' टीम इंडिया के विस्फोटक बल्लेबाज सूर्यकुमार यादव ने आज यूपी के मुख्यमंत्री योगी आदित्यनाथ से मुलाकात की.  #Lucknow #UttarPradesh #TeamIndia #INDvsNZ #Trending  ',
+        tweetPic : 'https://pbs.twimg.com/media/FntC8KcaAAIb7ox?format=jpg&name=medium',
+       
+        tweetCount : 400,
+        retweetCount : 327 ,
+        likesCount : 90,
+        viewsCount : '7k',
+        hastags : ['#sports','#Winners'],
+        followers : 200,
+        followings : 400,
+        joinedDate : '22 dec 2022',
+        tweets : [
+            {
+                tweetText : ' Suryakumar Ashok Yadav, also known as SKY, is an Indian international cricketer who plays for the Indian cricket team.  ',
+                tweetPic : ' https://resources.pulse.icc-cricket.com/ICC/photo/2022/08/15/9891ff6b-2407-4e5e-997c-77419e168b94/GettyImages-1241824431.jpg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+
+                ]
+            },
+            {
+                tweetText : ' Suryakumar Ashok Yadav, also known as SKY, is an Indian international cricketer who plays for the Indian cricket team.  ',
+                tweetPic : ' https://p.imgci.com/db/PICTURES/CMS/343500/343568.jpg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+
+                ]
+            }
         ],
-      },
-      {
-        tweetText:
-          " Best friends Motu and Patlu live in Furfuri Nagar and always fall into trouble. To get out of those problems, often due to Motus clumsy actions, they eventually get help from their other friends.",
-        tweetPic:
-          "https://static.toiimg.com/thumb/resizemode-4,width-1200,height-900,msid-54752036/54752036.jpg",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
+    },
+    {
+        id:4,
+        name : 'Motu-paTlu',
+        handlerName : '@MotuPatlu',
+        organization : '',
+        tweetText : ' Best friends Motu and Patlu live in Furfuri Nagar and always fall into trouble. To get out of those problems, often due to Motus clumsy actions, they eventually get help from their other friends. ',
+        tweetPic : ' http://cdn.shopify.com/s/files/1/0527/0795/0750/collections/Motu-patlu.jpg?v=1659161477',
+        tweetCount : 650,
+        retweetCount : 699 ,
+        likesCount : 900,
+        viewsCount : '17k',
+        hastags : ['#samoshlover' , '#cartoon' , '# Indian'],
+        followers : 200,
+        followings : 400,
+        joinedDate : '22 dec 2022',
+        tweets : [
+            {
+                tweetText : ' Best friends Motu and Patlu live in Furfuri Nagar and always fall into trouble. To get out of those problems, often due to Motus clumsy actions, they eventually get help from their other friends. ',
+                tweetPic : 'https://m.media-amazon.com/images/M/MV5BODY4Y2UyODUtYjkzNC00NmZlLWEzNWYtMTAxYmIzNGVlYmVkXkEyXkFqcGdeQXVyODAzNzAwOTU@.V1.jpg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+
+                ]
+            },
+            {
+                tweetText : ' Best friends Motu and Patlu live in Furfuri Nagar and always fall into trouble. To get out of those problems, often due to Motus clumsy actions, they eventually get help from their other friends.',
+                tweetPic : 'https://static.toiimg.com/thumb/resizemode-4,width-1200,height-900,msid-54752036/54752036.jpg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+
+                ]
+            }
         ],
-      },
-    ],
-  },
-  {
-    id: 5,
-    name: "Narendra Modi",
-    handlerName: "@MODIJI-bjp",
-    organization: "Prime Minister of India",
-    tweetText: `Narendra Damodardas Modi is an Indian politician serving as the 14th and current Prime Minister of India since 2014.  `,
-    tweetPic:
-      " https://i0.wp.com/www.opindia.com/wp-content/uploads/2022/10/PM-Modi-Image-007-13102022.jpg?fit=1189%2C689&ssl=1",
-    tweetCount: 650,
-    retweetCount: 699,
-    likesCount: 900,
-    viewsCount: "17k",
-    followers: 200,
-    followings: 400,
-    joinedDate: "22 dec 2022",
-    tweets: [
-      {
-        tweetText:
-          "  Narendra Damodardas Modi is an Indian politician serving as the 14th and current Prime Minister of India since 2014.",
-        tweetPic:
-          " https://www.thestatesman.com/wp-content/uploads/2022/09/03_Merged.jpg",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
+        
+
+    } ,
+    {
+        id:5,
+        name : 'Narendra Modi',
+        handlerName : '@MODIJI-bjp',
+        organization : 'Prime Minister of India',
+        tweetText : `Narendra Damodardas Modi is an Indian politician serving as the 14th and current Prime Minister of India since 2014.  `,
+        tweetPic : ' https://i0.wp.com/www.opindia.com/wp-content/uploads/2022/10/PM-Modi-Image-007-13102022.jpg?fit=1189%2C689&ssl=1',
+        tweetCount : 650,
+        retweetCount : 699 ,
+        likesCount : 900,
+        viewsCount : '17k',
+        followers : 200,
+        followings : 400,
+        joinedDate : '22 dec 2022',
+        tweets : [
+            {
+                tweetText : '  Narendra Damodardas Modi is an Indian politician serving as the 14th and current Prime Minister of India since 2014.',
+                tweetPic : ' https://www.thestatesman.com/wp-content/uploads/2022/09/03_Merged.jpg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+
+                ]
+            },
+            {
+                tweetText : ' Modi was the Chief Minister of Gujarat from 2001 to 2014 and is the Member of Parliament from Varanasi.  ',
+                tweetPic : ' https://upload.wikimedia.org/wikipedia/commons/8/80/PM_at_First_Meeting_of_Central_Asia_Summit.jpg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'ram',
+                        handlerName : 'ram@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+                    {
+                        name : 'sham',
+                        handlerName : 'sham@gmail.com',
+                        tweetReplyText : 'hello everyone',
+                        tweetCount : 100,
+                        retweetCount : 100 ,
+                        likesCount : 100,
+                        viewsCount : '102k',
+                    },
+
+                ]
+            }
         ],
-      },
-      {
-        tweetText:
-          " Modi was the Chief Minister of Gujarat from 2001 to 2014 and is the Member of Parliament from Varanasi.  ",
-        tweetPic:
-          " https://upload.wikimedia.org/wikipedia/commons/8/80/PM_at_First_Meeting_of_Central_Asia_Summit.jpg",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "ram",
-            handlerName: "ram@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
-          {
-            name: "sham",
-            handlerName: "sham@gmail.com",
-            tweetReplyText: "hello everyone",
-            tweetCount: 100,
-            retweetCount: 100,
-            likesCount: 100,
-            viewsCount: "102k",
-          },
+    },
+    {
+        id:6,
+        name : 'Virat kohli',
+        handlerName : '@KING kohli',
+        organization : 'Indian cricketer        ',
+        tweetText : `Virat Kohli is an Indian international cricketer and former captain of the Indian national team. Widely regarded as one of the greatest batsmen of all time, `,
+        tweetPic : 'https://akm-img-a-in.tosshub.com/aajtak/images/photo_gallery/202205/kohli_virat.jpg ',
+        tweetCount : 100,
+        retweetCount : 509 ,
+        likesCount : 450,
+        viewsCount : '79k',
+        hastags : ['#Freedom Fighter','#India'],
+        followers : 200,
+        followings : 400,
+        joinedDate : '22 dec 2022',
+        tweets : [
+            {
+                tweetText : ' Virat Kohli is an Indian international cricketer and former captain of the Indian national team. Widely regarded as one of the greatest batsmen of all time, ',
+                tweetPic : 'https://im.rediff.com/cricket/2022/may/05kohli1.JPG',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+
+                ]
+            },
+            {
+                tweetText : ' Virat Kohli is an Indian international cricketer and former captain of the Indian national team. Widely regarded as one of the greatest batsmen of all time,',
+                tweetPic : 'https://images.news18.com/ibnlive/uploads/2022/04/virat-kohli-ipl-2022.jpg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+
+                ]
+            }
         ],
-      },
-    ],
-  },
-  {
-    id: 6,
-    name: "Virat kohli",
-    handlerName: "@KING kohli",
-    organization: "Indian cricketer        ",
-    tweetText: `Virat Kohli is an Indian international cricketer and former captain of the Indian national team. Widely regarded as one of the greatest batsmen of all time, `,
-    tweetPic:
-      "https://akm-img-a-in.tosshub.com/aajtak/images/photo_gallery/202205/kohli_virat.jpg ",
-    tweetCount: 100,
-    retweetCount: 509,
-    likesCount: 450,
-    viewsCount: "79k",
-    hastags: ["#Freedom Fighter", "#India"],
-    followers: 200,
-    followings: 400,
-    joinedDate: "22 dec 2022",
-    tweets: [
-      {
-        tweetText:
-          " Virat Kohli is an Indian international cricketer and former captain of the Indian national team. Widely regarded as one of the greatest batsmen of all time, ",
-        tweetPic: "https://im.rediff.com/cricket/2022/may/05kohli1.JPG",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
+    },
+    {
+        id:7,
+        name : ' Aishwarya Rai Bachchan',
+        handlerName : '@aishwarya',
+        organization : 'Indian actress        ',
+        tweetText : ` Aishwarya Rai Bachchan is an Indian actress who is primarily known for her work in Hindi and Tamil films. The winner of the Miss World 1994 pageant, she has established herself as one of the most popular`,
+        tweetPic : 'https://www.whoa.in/download/aishwarya-rai-smile-shining-eyes-hd--wallpaper ',
+        tweetCount : 100,
+        retweetCount : 509 ,
+        likesCount : 450,
+        viewsCount : '79k',
+        refLink : 'https://twitter.com/AshwiniVaishnaw',
+        hastags: ['#Electronics','#iphone'],
+        followers : 200,
+        followings : 400,
+        joinedDate : '22 dec 2022',
+        tweets : [
+            {
+                tweetText : ' Aishwarya Rai Bachchan is an Indian actress who is primarily known for her work in Hindi and Tamil films. The winner of the Miss World 1994 pageant, she has established herself as one of the most popular ',
+                tweetPic : ' https://www.filmibeat.com/wimg/desktop/2019/07/aishwarya-rai-bachchan_16.jpg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+
+                ]
+            },
+            {
+                tweetText : ' Aishwarya Rai Bachchan is an Indian actress who is primarily known for her work in Hindi and Tamil films. The winner of the Miss World 1994 pageant, she has established herself as one of the most popular ',
+                tweetPic : ' https://wallpaperaccess.com/full/1279803.jpg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+
+                ]
+            }
         ],
-      },
-      {
-        tweetText:
-          " Virat Kohli is an Indian international cricketer and former captain of the Indian national team. Widely regarded as one of the greatest batsmen of all time,",
-        tweetPic:
-          "https://images.news18.com/ibnlive/uploads/2022/04/virat-kohli-ipl-2022.jpg",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 7,
-    name: " Aishwarya Rai Bachchan",
-    handlerName: "@aishwarya",
-    organization: "Indian actress        ",
-    tweetText: ` Aishwarya Rai Bachchan is an Indian actress who is primarily known for her work in Hindi and Tamil films. The winner of the Miss World 1994 pageant, she has established herself as one of the most popular`,
-    tweetPic:
-      "https://www.whoa.in/download/aishwarya-rai-smile-shining-eyes-hd--wallpaper ",
-    tweetCount: 100,
-    retweetCount: 509,
-    likesCount: 450,
-    viewsCount: "79k",
-    refLink: "https://twitter.com/AshwiniVaishnaw",
-    hastags: ["#Electronics", "#iphone"],
-    followers: 200,
-    followings: 400,
-    joinedDate: "22 dec 2022",
-    tweets: [
-      {
-        tweetText:
-          " Aishwarya Rai Bachchan is an Indian actress who is primarily known for her work in Hindi and Tamil films. The winner of the Miss World 1994 pageant, she has established herself as one of the most popular ",
-        tweetPic:
-          " https://www.filmibeat.com/wimg/desktop/2019/07/aishwarya-rai-bachchan_16.jpg",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-        ],
-      },
-      {
-        tweetText:
-          " Aishwarya Rai Bachchan is an Indian actress who is primarily known for her work in Hindi and Tamil films. The winner of the Miss World 1994 pageant, she has established herself as one of the most popular ",
-        tweetPic: " https://wallpaperaccess.com/full/1279803.jpg",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 8,
-    name: "kimkk",
-    handlerName: "@ippittipapitti",
-    organization: "",
-    tweetText: `Free education is education  funded through government spending or charitable organizations rather than tuition funding. Many models of free higher education have been proposed. 
+    },
+    {
+        id:8,
+        name : 'kimkk',
+        handlerName : '@ippittipapitti',
+        organization : '',
+        tweetText : `Free education is education  funded through government spending or charitable organizations rather than tuition funding. Many models of free higher education have been proposed. 
         primar school  and other comprehensive   or compulsory education  is free in many countries `,
-    tweetPic:
-      "https://bostonglobe-prod.cdn.arcpublishing.com/resizer/GWdOBJKUHt-np_On_d4GHlJB20A=/960x0/cloudfront-us-east-1.images.arcpublishing.com/bostonglobe/6SYFQD3KK2SEQCXJQYXH7K4RKM.jpg",
-    tweetCount: 10,
-    retweetCount: 50,
-    likesCount: 40,
-    viewsCount: "9k",
-    hastags: ["#bcm112", "#students", "#education", "#allGovernmets"],
-    refLink: "https://twitter.com/ippittipapitti",
-    followers: 200,
-    followings: 400,
-    joinedDate: "22 dec 2022",
-    tweets: [
-      {
-        tweetText:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-        tweetPic:
-          "https://lh3.googleusercontent.com/8ygpNx4Er1H9LmB-D8W7cBi-qsvcDSDlWw2CVIk5bHFM77q6a46V0GNxSzopAUtvLKIApDTW7RKnrJ7m7Yp4obN1s23V3dRMrYLwvz5GJc_gu1N-M8tGkyhFYGf40nwZCg7jbgGa1g=w1920-h1080",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
+        tweetPic : 'https://bostonglobe-prod.cdn.arcpublishing.com/resizer/GWdOBJKUHt-np_On_d4GHlJB20A=/960x0/cloudfront-us-east-1.images.arcpublishing.com/bostonglobe/6SYFQD3KK2SEQCXJQYXH7K4RKM.jpg',
+        tweetCount : 10,
+        retweetCount : 50 ,
+        likesCount : 40,
+        viewsCount : '9k',
+        hastags : ['#bcm112','#students','#education','#allGovernmets'] ,
+        refLink : 'https://twitter.com/ippittipapitti',
+        followers : 200,
+        followings : 400,
+        joinedDate : '22 dec 2022',
+        tweets : [
+            {
+                tweetText : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
+                tweetPic : 'https://lh3.googleusercontent.com/8ygpNx4Er1H9LmB-D8W7cBi-qsvcDSDlWw2CVIk5bHFM77q6a46V0GNxSzopAUtvLKIApDTW7RKnrJ7m7Yp4obN1s23V3dRMrYLwvz5GJc_gu1N-M8tGkyhFYGf40nwZCg7jbgGa1g=w1920-h1080',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+
+                ]
+            },
+            {
+                tweetText : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
+                tweetPic : 'https://lh3.googleusercontent.com/8ygpNx4Er1H9LmB-D8W7cBi-qsvcDSDlWw2CVIk5bHFM77q6a46V0GNxSzopAUtvLKIApDTW7RKnrJ7m7Yp4obN1s23V3dRMrYLwvz5GJc_gu1N-M8tGkyhFYGf40nwZCg7jbgGa1g=w1920-h1080',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+
+                ]
+            }
         ],
-      },
-      {
-        tweetText:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-        tweetPic:
-          "https://lh3.googleusercontent.com/8ygpNx4Er1H9LmB-D8W7cBi-qsvcDSDlWw2CVIk5bHFM77q6a46V0GNxSzopAUtvLKIApDTW7RKnrJ7m7Yp4obN1s23V3dRMrYLwvz5GJc_gu1N-M8tGkyhFYGf40nwZCg7jbgGa1g=w1920-h1080",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
+    },
+    {
+        id:9,
+        name : 'Shah Rukh khan',
+        handlerName : '@SRk',
+        organization : 'Actor' ,
+        tweetText : ' Shah Rukh Khan has unveiled new posters of Pathaan which include solo posters of him, Deepika Padukone and John Abraham. ',
+        tweetPic : ' https://pbs.twimg.com/media/E1-zMFKUYAY-dFP.jpg',
+        tweetCount : 10,
+        retweetCount : 50 ,
+        likesCount : 40,
+        viewsCount : '9k',
+        hastags : ['#Education','#Rajasthan'],
+        refLink : 'https://dainik-b.in/ekPIEaD5Jwb',
+        followers : 200,
+        followings : 400,
+        joinedDate : '22 dec 2022',
+        tweets : [
+            {
+                tweetText : ' Shah Rukh Khan, also known by the initialism SRK, is an Indian actor and film producer who works in Hindi films.  ',
+                tweetPic : ' https://img.mensxp.com/media/content/2022/Aug/Header-Image_BCCL_62e91b2d4c4a5.jpeg',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+
+                ]
+            },
+            {
+                tweetText : ' Shah Rukh Khan, also known by the initialism SRK, is an Indian actor and film producer who works in Hindi films.  ',
+                tweetPic : 'https://images.news18.com/ibnlive/uploads/2021/11/shah-rukh-khan-2-1.jpg ',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+
+                ]
+            }
         ],
-      },
-    ],
-  },
-  {
-    id: 9,
-    name: "Dainik Bhaskar",
-    handlerName: "@DainikBhaskar",
-    organization: "Tv News",
-    tweetText:
-      "राजस्थान के सरकारी स्कूल के स्टूडेंट्स को टीचर्स के लिए पदयात्रा करनी पड़ रही है। कालासर विद्यालय में इस समय 500 स्टूडेंट्स पढ़ रहे हैं, लेकिन स्कूल में टीचर्स के पद खाली पड़े हैं। दसवीं के स्टूडेंट्स का कोर्स भी पूरा नहीं हुआ है।",
-    tweetPic:
-      "data:image/png;base64,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",
-    tweetCount: 10,
-    retweetCount: 50,
-    likesCount: 40,
-    viewsCount: "9k",
-    hastags: ["#Education", "#Rajasthan"],
-    refLink: "https://dainik-b.in/ekPIEaD5Jwb",
-    followers: 200,
-    followings: 400,
-    joinedDate: "22 dec 2022",
-    tweets: [
-      {
-        tweetText:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-        tweetPic:
-          "https://lh3.googleusercontent.com/8ygpNx4Er1H9LmB-D8W7cBi-qsvcDSDlWw2CVIk5bHFM77q6a46V0GNxSzopAUtvLKIApDTW7RKnrJ7m7Yp4obN1s23V3dRMrYLwvz5GJc_gu1N-M8tGkyhFYGf40nwZCg7jbgGa1g=w1920-h1080",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-        ],
-      },
-      {
-        tweetText:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-        tweetPic:
-          "https://lh3.googleusercontent.com/8ygpNx4Er1H9LmB-D8W7cBi-qsvcDSDlWw2CVIk5bHFM77q6a46V0GNxSzopAUtvLKIApDTW7RKnrJ7m7Yp4obN1s23V3dRMrYLwvz5GJc_gu1N-M8tGkyhFYGf40nwZCg7jbgGa1g=w1920-h1080",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 10,
-    name: "Madhya Pradesh Tourism",
-    handlerName: "@MPTourism",
-    organization: "Mp tourism",
-    tweetText:
-      "If you are a nature-lover who loves to spend time in the jungle and adores the mighty #bigcats, plan a jungle safari in the #HeartofIndia. Wander through the lush green forests and keep your cameras handy!",
-    tweetPic:
-      "https://www.tourmyindia.com/states/madhyapradesh/image/mp-tourism.webp",
-    retweetCount: 50,
-    likesCount: 40,
-    viewsCount: "9k",
-    hastags: ["#BIGcat", "#HeartofIndia"],
-    refLink: "https://www.mptigerfoundation.org/news-corner/blog",
-    followers: 200,
-    followings: 400,
-    joinedDate: "22 dec 2022",
-    tweets: [
-      {
-        tweetText:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-        tweetPic:
-          "https://lh3.googleusercontent.com/8ygpNx4Er1H9LmB-D8W7cBi-qsvcDSDlWw2CVIk5bHFM77q6a46V0GNxSzopAUtvLKIApDTW7RKnrJ7m7Yp4obN1s23V3dRMrYLwvz5GJc_gu1N-M8tGkyhFYGf40nwZCg7jbgGa1g=w1920-h1080",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-        ],
-      },
-      {
-        tweetText:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-        tweetPic:
-          "https://lh3.googleusercontent.com/8ygpNx4Er1H9LmB-D8W7cBi-qsvcDSDlWw2CVIk5bHFM77q6a46V0GNxSzopAUtvLKIApDTW7RKnrJ7m7Yp4obN1s23V3dRMrYLwvz5GJc_gu1N-M8tGkyhFYGf40nwZCg7jbgGa1g=w1920-h1080",
-        tweetCount: 100,
-        retweetCount: 100,
-        likesCount: 100,
-        viewsCount: "102k",
-        TweetReplies: [
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-          {
-            name: "",
-            handlerName: "",
-            tweetReplyText: "",
-          },
-        ],
-      },
-    ],
-  },
-];
+    },
+    {
+        id:10,
+        name : 'MS Dhoni',
+        handlerName : '@THALA',
+        organization : 'Indian cricketer        ',
+        tweetText : 'Mahendra Singh Dhoni, commonly known as MS Dhoni, is a former Indian cricketer and captain of the Indian national team in limited-overs formats from 2007 to 2017, and in Test cricket from 2008 to 2014. ',
+        tweetPic : ' https://akm-img-a-in.tosshub.com/indiatoday/images/story/202211/untitled-1_0-one_one.jpg?VersionId=2UvgyBhEFLLMzztCbeFTTShGb9c33ddU',
+        retweetCount : 50 ,
+        likesCount : 40,
+        viewsCount : '9k',
+        hastags : ['#BIGcat','#HeartofIndia'],
+        refLink : 'https://www.mptigerfoundation.org/news-corner/blog' ,
+        followers : 200,
+        followings : 400,
+        joinedDate : '22 dec 2022' ,
+        tweets : [
+            {
+                tweetText : ' He is also the current captain of Chennai Super Kings in the Indian Premier League. ',
+                tweetPic : 'https://im.rediff.com/cricket/2020/sep/19msd-toss.jpg ',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+
+                ]
+            },
+            {
+                tweetText : ' He is also the current captain of Chennai Super Kings in the Indian Premier League. ',
+                tweetPic : 'https://c.ndtvimg.com/2021-11/o66r0bb8_ms-dhoni-ipl_625x300_20_November_21.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605 ',
+                tweetCount : 100,
+                retweetCount : 100 ,
+                likesCount : 100,
+                viewsCount : '102k',
+                TweetReplies : [
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+                    {
+                        name : '',
+                        handlerName : '',
+                        tweetReplyText : ''
+                    },
+
+                ]
+            }
+   ],
+}
+]

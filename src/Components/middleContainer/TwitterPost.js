@@ -22,14 +22,14 @@ export default function TwitterPost() {
   const [newProfile, setNewProfile] = useRecoilState(userProfile);
 
   const [likesCount, setLikesCount] = useState(1000);
-  const [icon, setIcon] = useState("blue");
+  const [icon, setIcon] = useState("rgb(77, 75, 75)");
 
   function handleLike() {
     likesCount === 1000 ? setLikesCount(1001) : setLikesCount(1000);
     if (likesCount === 1000) {
       setIcon("red");
     } else {
-      setIcon("blue");
+      setIcon("rgb(77, 75, 75)");
     }
   }
 
