@@ -2,7 +2,7 @@ import { atom } from "recoil";
 
 export const isLoginAtom = atom({
   key: "isLogin",
-  default: false,
+  default: true,
 });
 
 export const isTweetPost = atom({
@@ -29,3 +29,13 @@ export const userTweetProfile = atom({
   key: "userTweetProfile",
   default: {},
 });
+
+export const userProfileTweet = atom({
+  key: "userProfileTweet",
+  default: [],
+});
+
+export const requestedProfileAtom = atom({
+  key: "requestedProfile",
+  default:null
+})

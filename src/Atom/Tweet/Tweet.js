@@ -8,13 +8,13 @@ import CustomButton from "../Button/CustomButton";
 import ConstData from "../../ConstData/ConstData";
 import { tweetPosts } from "../../ConstData/ConstData";
 import { useRecoilState } from "recoil";
-import { isTweetPost } from "../../Recoil/Atom1/Atom";
+import { isTweetPost,userProfileTweet } from "../../Recoil/Atom1/Atom";
 import { Avatar } from "antd";
 
 function Tweet() {
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
-
+  const [profileTweet, setProfileTweet]= useRecoilState(userProfileTweet)
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const [forTrue, setForTrue] = useState(0);
   const [storeArray, setStoreArray] = useState("");
@@ -68,6 +68,7 @@ function Tweet() {
     setForTrue(forTrue + 1);
     setLoginStatus(loginStatus + 1);
     inputRef.current.value = "";
+    setProfileTweet([...profileTweet, newObj])
   }
 
   return (

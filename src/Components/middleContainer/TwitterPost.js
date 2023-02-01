@@ -11,8 +11,12 @@ import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import { useState, useEffect } from "react";
 import { useRecoilState } from "recoil";
-import { isTweetPost, userProfile } from "../../Recoil/Atom1/Atom";
-import { useNavigate } from "react-router-dom";
+import {
+  isTweetPost,
+  userProfile,
+  requestedProfileAtom,
+} from "../../Recoil/Atom1/Atom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { tweetPosts } from "../../ConstData/ConstData";
 
 export default function TwitterPost() {
@@ -20,9 +24,10 @@ export default function TwitterPost() {
   const nevigate = useNavigate();
   const [newPost, setNewPost] = useRecoilState(isTweetPost);
   const [newProfile, setNewProfile] = useRecoilState(userProfile);
-
   const [likesCount, setLikesCount] = useState(1000);
+  const [requestedProfile, setRequestedProfile] = useState("");
   const [icon, setIcon] = useState("rgb(77, 75, 75)");
+  // const setRequestedProfile = useRecoilState(requestedProfileAtom)
 
   function handleLike() {
     likesCount === 1000 ? setLikesCount(1001) : setLikesCount(1000);
@@ -46,6 +51,12 @@ export default function TwitterPost() {
     nevigate("/Profile2");
   }
 
+  // function handleRedirectProfile() {
+  //   setRequestedProfile(userProfile);
+  //   const paramValue = post.handlerName.replace("@", "");
+  //   alert("hello");
+  //   nevigate(`/Profile/${paramValue}`);
+  // }
   return (
     <>
       {post.map((data) => {
@@ -53,6 +64,7 @@ export default function TwitterPost() {
           <div className={style.wrapper}>
             <div className={style.container1}>
               <div
+                // onClick={handleRedirectProfile}
                 onClick={() =>
                   xyz({
                     name: data.name,
@@ -60,7 +72,6 @@ export default function TwitterPost() {
                     organization: data.organization,
                     tweetText: data.tweetText,
                     tweetPic: data.tweetPic,
-
                     tweetCount: data.tweetCount,
                     retweetCount: data.retweetCount,
                     likesCount: data.likesCount,

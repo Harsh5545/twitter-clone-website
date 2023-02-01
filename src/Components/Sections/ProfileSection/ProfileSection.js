@@ -4,6 +4,7 @@ import style from "./ProfileSection.module.css";
 import WestIcon from "@mui/icons-material/West";
 import CustomButton from "../../../Atom/Button/CustomButton";
 import { useNavigate } from "react-router-dom";
+import UserTweet from "./UserTweet/UserTweet";
 
 function ProfileSection() {
   const nevigate = useNavigate();
@@ -38,11 +39,11 @@ function ProfileSection() {
         <div key={Data.id} className={style.textcontaint}>
           <h4>{`${"Name:-"}${Data.Name}`}</h4>
           <h5>{`${"@"}${Data.Email}`}</h5>
-          <h5>{`${"Mob no:-"}${Data.Phone}`}</h5>
           <h5>followers :- 2000</h5>
           <h5>likesCount :- 154 likes</h5>
         </div>
       </div>
+      <UserTweet />
     </>
   );
 }
