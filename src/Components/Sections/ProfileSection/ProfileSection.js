@@ -37,10 +37,17 @@ function ProfileSection() {
         </div>
 
         <div key={Data.id} className={style.textcontaint}>
-          <h4>{`${"Name:-"}${Data.Name}`}</h4>
+          <h3>{`${Data.Name}`}</h3>
           <h5>{`${"@"}${Data.Email}`}</h5>
-          <h5>followers :- 2000</h5>
-          <h5>likesCount :- 154 likes</h5>
+
+          <p>
+            These are some projects I've invested in private/seed rounds and
+            helping them to get more recognition with my network
+          </p>
+          <span>
+            <h5> 2000 Following</h5>
+            <h5>154 Followers</h5>
+          </span>
         </div>
       </div>
       <UserTweet />

@@ -13,7 +13,7 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
-  right: 1.6rem;
+  right: 1rem;
 
 
 }
@@ -39,17 +39,20 @@
   }
   .sidebarOption span{
     font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.29rem;
     font-weight: 500;
+  padding: 0.05rem 1rem 0.1rem 1rem;
+    
  
     
   }
   .container{
-    gap: 4rem;
+    gap: 2rem;
   }
   .sidebarOption:hover {
-    background-color: rgb(77, 75, 75);
+    background-color: rgb(24, 23, 23);
     border-radius: 30px;
+  
     color: white;
     transition: color 100ms ease-out;
     font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
@@ -63,13 +66,14 @@
   }
   
   .sidebar__tweet {
-    width: 85%;
+    width: 92%;
     background-color: #1A8CD8;
     border: none;
     color: white;
-    font-weight: 900;
+    font-weight: 1000;
+    font-size: 1rem;
     border-radius: 30px;
-    height: 3.12rem;
+    height: 3.32rem;
     /* margin-top: 1.25rem;  } */
   }
   
@@ -107,4 +111,7 @@
 .logo:hover{
   background-color: #131E3A;
 
+}
+.button2{
+  margin-left: 0.1rem;
 }

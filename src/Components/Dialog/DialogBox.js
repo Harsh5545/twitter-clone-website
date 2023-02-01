@@ -33,7 +33,7 @@ function DialogBox(props) {
         <CustomButton
           btnNext={handaleClick}
           buttonText="Logout"
-          customCss={style.button}
+          customCss={style.button1}
         />
       </div>
     </Dialog>

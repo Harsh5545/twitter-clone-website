@@ -10,7 +10,7 @@ width: 39.3vw
 }
 .main{
     display: flex;
-    border: 1px rgb(26, 25, 25) solid;
+    border: 1px rgb(60, 60, 60) solid;
     overflow-y: scroll;
     overflow-x: hidden;
     flex-direction: column;

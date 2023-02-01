@@ -85,7 +85,7 @@ function LeftSec() {
                 open={isOpen}
                 onClose={handleClose}
                 style={{
-                  background: "rgba(91, 112, 131, 0.4)",
+                  background: "rgba(91, 112, 131, 0.8)",
                   fontSize: "15px",
                   lineHeight: "40px",
                 }}

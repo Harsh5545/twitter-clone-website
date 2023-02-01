@@ -4,12 +4,12 @@
   /* background-color: #000; */
   backdrop-filter: blur(5px);
   z-index: 10;
-  border-bottom: 0.5px solid rgb(26, 25, 25);
+  border-bottom: 0.5px solid rgb(60, 60, 60);
   padding: 0.93rem 1.25rem;
 }
 
 .feed__header h2 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 50rem;
   color:white;
 }

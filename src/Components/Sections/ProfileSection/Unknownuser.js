@@ -48,17 +48,17 @@ function ProfileSection() {
           <span className={style.Avatarsection}>
             <img className={style.img} src={unknownProfileData.tweetPic} />
 
-            <CustomButton customCss={style.btn} buttonText={"Edit profile"} />
+            <CustomButton customCss={style.btn} buttonText={"Follow"} />
           </span>
         </div>
         <div className={style.textcontaint}>
-          <h4>{`      Name:-${unknownProfileData.name}`}</h4>
-          <h5>{`${unknownProfileData.handlerName}`}</h5>
+          <h4>{`Name:-${unknownProfileData.name}`}</h4>
+          <h5>{`${unknownProfileData.haxndlerName}`}</h5>
           <h5>{`${"tweetCount:-"}${unknownProfileData.tweetCount}`}</h5>
           <h5>{`${"likescount:-"}${unknownProfileData.likesCount}`}</h5>
           <h5>{`${"followers:-"}${unknownProfileData.followers}`}</h5>
           <h5>{`${"followings:-"}${unknownProfileData.followings}`}</h5>
-        </div>      
+        </div>
       </div>
       <div>
         {tweets && tweets.length > 0 ? (
