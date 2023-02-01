@@ -2,7 +2,7 @@ import { atom } from "recoil";
 
 export const isLoginAtom = atom({
   key: "isLogin",
-  default: true,
+  default: false,
 });
 
 export const isTweetPost = atom({

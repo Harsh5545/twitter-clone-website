@@ -68,7 +68,7 @@ function Login() {
       
       nevigate("/");
     } else {
-      alert("false");
+      alert("wrong Password");
     }
   };
 
