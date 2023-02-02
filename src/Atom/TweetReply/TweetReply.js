@@ -15,10 +15,10 @@ import { Avatar } from "antd";
 function TweetReplay() {
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
-  const [profileTweet, setProfileTweet] = useRecoilState(userProfileComment)
-  const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
+  const [profileTweet, setProfileTweet] = useRecoilState(userProfileComment);
+  // const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const [forTrue, setForTrue] = useState(0);
-  const [storeArray, setStoreArray] = useState("");
+  const [storeArrayComment, setStoreArrayComment] = useState("");
   let Data = JSON.parse(localStorage.getItem("user0"));
   const inputRef = useRef(null);
   const Icons = [
@@ -30,7 +30,7 @@ function TweetReplay() {
     { id: 5, icon: <BiUserCircle /> },
   ];
   function takeTweet(e) {
-    setStoreArray(e.target.value);
+    setStoreArrayComment(e.target.value);
   }
   function handleOnClickIcon(action) {
     if (action === "pickImage") {
@@ -46,14 +46,14 @@ function TweetReplay() {
     };
     reader.readAsDataURL(e.target.files[0]);
   }
-  function handleNewTweet() {
+  function handleNewReply() {
     setIsOpen(true);
 
     let newObj = {
       name: Data.Name,
       handlerName: Data.Email,
       organization: "United States government organization",
-      tweetText: storeArray,
+      tweetText: storeArrayComment,
       tweetPic: image,
       tweetCount: 100,
       retweetCount: 100,
@@ -67,7 +67,7 @@ function TweetReplay() {
     tweetPosts.unshift(newObj);
 
     setForTrue(forTrue + 1);
-    setLoginStatus(loginStatus + 1);
+    // setLoginStatus(loginStatus + 1);
     inputRef.current.value = "";
     setProfileTweet([...profileTweet, newObj]);
   }
@@ -117,7 +117,7 @@ function TweetReplay() {
               })}
               <CustomButton
                 buttonText="Tweet"
-                btnNext={handleNewTweet}
+                btnNext={handleNewReply}
                 customCss={style.button}
               />
             </div>

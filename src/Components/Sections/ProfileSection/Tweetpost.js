@@ -10,6 +10,7 @@ import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import style2 from "./Tweetpost.module.css";
 import CustomButton from "../../../Atom/Button/CustomButton";
+import UserProfileComment from "./Comment/UserProfileComment";
 function Tweetpost() {
   const tweetPostData = useRecoilValue(userTweet);
   // const nameArray=(tweetPostData.TweetReplies.name)
@@ -65,6 +66,9 @@ function Tweetpost() {
           <UploadIcon />
         </div>
       </div>
+
+      <UserProfileComment />
+
       <div className={style2.wrapper}>
         <div className={style2.container1}>
           <div>
@@ -145,3 +149,7 @@ function Tweetpost() {
 }
 
 export default Tweetpost;
+
+// export function UserProfileComment() {
+//   return;
+// }
