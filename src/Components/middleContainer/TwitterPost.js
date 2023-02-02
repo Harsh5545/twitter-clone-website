@@ -1,7 +1,7 @@
 import React from "react";
 
 import style from "./TwitterPost.module.css";
-
+import TweetReply from "../../Atom/TweetReply/TweetReply";
 import { Avatar } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import SyncIcon from "@mui/icons-material/Sync";
@@ -11,6 +11,7 @@ import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import { useState, useEffect } from "react";
 import { useRecoilState } from "recoil";
+import Dialog from "@mui/material/Dialog";
 import {
   isTweetPost,
   userProfile,
@@ -27,6 +28,7 @@ export default function TwitterPost() {
   const [likesCount, setLikesCount] = useState(1000);
   const [requestedProfile, setRequestedProfile] = useState("");
   const [icon, setIcon] = useState("rgb(77, 75, 75)");
+  const [isOpen, SetisOpen] = useState(false);
   // const setRequestedProfile = useRecoilState(requestedProfileAtom)
 
   function handleLike() {
@@ -50,7 +52,12 @@ export default function TwitterPost() {
     setNewProfile(dataName);
     nevigate("/Profile2");
   }
-
+  const handleClose = () => {
+    SetisOpen(false);
+  };
+  const handleClickOpen = () => {
+    SetisOpen(true);
+  };
   // function handleRedirectProfile() {
   //   setRequestedProfile(userProfile);
   //   const paramValue = post.handlerName.replace("@", "");
@@ -111,7 +118,20 @@ export default function TwitterPost() {
             <div className={style.icons}>
               <div className={style.icons}>
                 {data.tweetCount}
-                <ChatBubbleOutlineIcon />
+                <ChatBubbleOutlineIcon onClick={handleClickOpen} />
+                <div className={style.Dialog}>
+                  <Dialog
+                    open={isOpen}
+                    onClose={handleClose}
+                    style={{
+                      background: "rgba(91, 112, 131, 0.8)",
+                      fontSize: "15px",
+                      lineHeight: "40px",
+                    }}
+                  >
+                    <TweetReply />
+                  </Dialog>
+                </div>
               </div>
               <div className={style.icons}>
                 {data.retweetCount}

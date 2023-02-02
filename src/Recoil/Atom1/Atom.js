@@ -35,6 +35,10 @@ export const userProfileTweet = atom({
   default: [],
 });
 
+export const userProfileComment = atom({
+  key: "userProfileComment",
+  default: [],
+});
 export const requestedProfileAtom = atom({
   key: "requestedProfile",
   default:null
