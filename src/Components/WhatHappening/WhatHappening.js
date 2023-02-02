@@ -8,16 +8,18 @@ import CustomButton from "../../Atom/Button/CustomButton";
 import { tweetPosts } from "../../ConstData/ConstData";
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
-import { isTweetPost, userProfileTweet } from "../../Recoil/Atom1/Atom";
-import { Avatar } from "antd";
+
+import { isTweetPost,Personaltweet } from "../../Recoil/Atom1/Atom";
 
 function WhatHappening() {
+  let Data = JSON.parse(localStorage.getItem("user0"));
   const [image, setImage] = useState("");
   const [storeArray, setStoreArray] = useState("");
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
-  const [profileTweet, setProfileTweet] = useRecoilState(userProfileTweet);
+  const [personal, setPersonal ] = useRecoilState(Personaltweet);
   const inputRef = useRef(null);
-  let Data = JSON.parse(localStorage.getItem("user0"));
+  const disabled=(!storeArray)
+
   const Icons = [
     { id: 0, icon: <FaGlobe /> },
     { id: 1, icon: <FaImage />, action: "pickImage" },
@@ -30,7 +32,7 @@ function WhatHappening() {
   function takeTweet(e) {
     setStoreArray(e.target.value);
   }
-  // function to triiger picking image imput
+  // function to triiger picking image input
   function handleOnClickIcon(action) {
     if (action === "pickImage") {
       inputRef.current.click();
@@ -42,6 +44,7 @@ function WhatHappening() {
     let reader = new FileReader();
     reader.onload = (e) => {
       setImage(e.target.result);
+    
     };
     reader.readAsDataURL(e.target.files[0]);
   }
@@ -62,11 +65,11 @@ function WhatHappening() {
     };
 
     tweetPosts.unshift(newObj);
-
     setLoginStatus(loginStatus + 1);
     setImage("");
-    inputRef.current.value = "";
-    setProfileTweet([...profileTweet, newObj]);
+    setStoreArray("");
+    inputRef.current.value=""
+    setPersonal([newObj,...personal])
   }
 
   return (
@@ -74,23 +77,27 @@ function WhatHappening() {
       <div className={style.parentContainer}>
         <div className={style.main}>
           <div className={style.wrapper}>
-            <div className={style.wrapper1}>
-              <textarea
-                placeholder="What's happening?"
-                rows={8}
-                cols={60}
-                onChange={takeTweet}
-              />
-            </div>
+            <textarea
+              placeholder="What's happening?"
+              rows={8}
+              cols={60}
+              onChange={takeTweet}
+            />
             <div className={style.privacy}>
               <FaGlobe />
               <span>Everyone can reply</span>
             </div>
-            {image && (
-              <div className={style.imageWrapper}>
-                <img src={image} height="100%" width="100%" alt="foo" />
-              </div>
-            )}
+            { 
+            image &&  
+            <div className={style.imageWrapper}>
+                <img
+                    src={image}
+                    height = '100%'
+                    width = '100%'
+                    alt = 'foo'
+                />
+                </div>
+            }
             <div className={style.iconscontainer}>
               {Icons.map((menu) => {
                 return (
@@ -103,13 +110,15 @@ function WhatHappening() {
                   </div>
                 );
               })}
-              <CustomButton
-                buttonText="Tweet"
-                btnNext={handleNewTweet}
-                customCss={style.button}
-              />
+               <CustomButton
+          disable={disabled}
+            buttonText="Tweet"
+            btnNext={handleNewTweet}
+            customCss={style.button}
+          />
             </div>
           </div>
+         
         </div>
         {/* hidden input */}
         <input

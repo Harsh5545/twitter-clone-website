@@ -6,11 +6,11 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from "@mui/icons-material/Verified";
-import { userProfileTweet } from "../../../../Recoil/Atom1/Atom";
+import { Personaltweet } from "../../../../Recoil/Atom1/Atom";
 import { useRecoilValue } from "recoil";
 import style2 from "./userTweet.module.css";
 function UserTweet() {
-  const Data = useRecoilValue(userProfileTweet);
+  const Data = useRecoilValue(Personaltweet);
   console.log(Data);
 
   return (

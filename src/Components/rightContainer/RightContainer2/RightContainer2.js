@@ -84,7 +84,7 @@ function Righthomebox2() {
                 <h3>
                   {menu.text}
                   <span style={{ color: "blue" }}> {menu.tag} </span>
-                  <VerifiedIcon style={{ color: "blue", fontSize: "20px" }} />
+                  <VerifiedIcon style={{ color: "#1D9BF0", fontSize: "1.5rem" }} />
                 </h3>
                 <h6>{menu.text2}</h6>
               </div>

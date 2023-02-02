@@ -6,16 +6,15 @@ import { HiOutlineGif } from "react-icons/hi2";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../Button/CustomButton";
-import ConstData from "../../ConstData/ConstData";
 import { tweetPosts } from "../../ConstData/ConstData";
 import { useRecoilState } from "recoil";
-import { isTweetPost, userProfileTweet } from "../../Recoil/Atom1/Atom";
+import { isTweetPost, Personaltweet } from "../../Recoil/Atom1/Atom";
 import { Avatar } from "antd";
 
 function Tweet() {
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
-  const [profileTweet, setProfileTweet] = useRecoilState(userProfileTweet);
+  const [profileTweet, setProfileTweet] = useRecoilState(Personaltweet);
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const [forTrue, setForTrue] = useState(0);
   const [storeArray, setStoreArray] = useState("");
@@ -83,7 +82,6 @@ function Tweet() {
             buttonText="X"
             customCss={style.btnClose}
             btnNext={handleClose}
-            
           />
           {/* <button onClick={Handleclose}>X</button> */}
           <div className={style.wrapper}>

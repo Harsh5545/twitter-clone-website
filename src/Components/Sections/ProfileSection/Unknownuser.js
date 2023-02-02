@@ -97,7 +97,7 @@ function ProfileSection() {
                         <span className={style2.text}>
                           <h3>
                             {unknownProfileData.name}
-                            <VerifiedIcon style={{ color: "blue" }} />
+                            <VerifiedIcon style={{ color: "#1D9BF0", fontSize: "1.5rem" }} />
                           </h3>
                         </span>
                         <p>{x.tweetText}</p>

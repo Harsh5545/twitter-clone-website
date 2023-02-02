@@ -6,16 +6,21 @@ import { HiOutlineGif } from "react-icons/hi2";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../Button/CustomButton";
+import ConstData from "../../ConstData/ConstData";
+import { tweetPosts } from "../../ConstData/ConstData";
 import { useRecoilState } from "recoil";
-import { isTweetPost, userProfileComment } from "../../Recoil/Atom1/Atom";
+import { isTweetPost, Personaltweet,forPassingId } from "../../Recoil/Atom1/Atom";
+// import { Avatar } from "antd";
 
-function TweetReplay() {
+function TweetReply() {
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
-  const [profileTweet, setProfileTweet] = useRecoilState(userProfileComment);
+  const [post,setPost]=useState(tweetPosts)
+  const [profileTweet, setProfileTweet] = useRecoilState(Personaltweet)
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
+  const[index,setIndex]=useRecoilState(forPassingId)
   const [forTrue, setForTrue] = useState(0);
-  const [storeArrayComment, setStoreArrayComment] = useState("");
+  const [storeArray, setStoreArray] = useState("");
   let Data = JSON.parse(localStorage.getItem("user0"));
   const inputRef = useRef(null);
   const Icons = [
@@ -27,7 +32,7 @@ function TweetReplay() {
     { id: 5, icon: <BiUserCircle /> },
   ];
   function takeTweet(e) {
-    setStoreArrayComment(e.target.value);
+    setStoreArray(e.target.value);
   }
   function handleOnClickIcon(action) {
     if (action === "pickImage") {
@@ -43,14 +48,22 @@ function TweetReplay() {
     };
     reader.readAsDataURL(e.target.files[0]);
   }
-  function handleNewReply() {
+  function handleNewTweet() {
     setIsOpen(true);
+    console.log(index)
+    let newObj1={
+      tweetComment:storeArray
+    }
+    post[index].tweetComment=([...post[index].tweetComment,newObj1])
+    console.log(storeArray)
 
-    let newObj = {
+
+
+    /*let newObj = {
       name: Data.Name,
       handlerName: Data.Email,
       organization: "United States government organization",
-      tweetText: storeArrayComment,
+      tweetText: storeArray,
       tweetPic: image,
       tweetCount: 100,
       retweetCount: 100,
@@ -59,14 +72,14 @@ function TweetReplay() {
       followers: 200,
       followings: 400,
       joinedDate: "22 dec 2022",
-    };
+    };*/
 
-    // tweetPosts.unshift(newObj);
+   // tweetPosts.unshift(newObj);
 
-    setForTrue(forTrue + 1);
-    setLoginStatus(loginStatus + 1);
-    inputRef.current.value = "";
-    setProfileTweet([...profileTweet, newObj]);
+    //setForTrue(forTrue + 1);
+    //setLoginStatus(loginStatus + 1);
+   // inputRef.current.value = "";
+    //setProfileTweet([...profileTweet, newObj]);
   }
   function handleClose() {
     setIsOpen(false);
@@ -113,8 +126,8 @@ function TweetReplay() {
                 );
               })}
               <CustomButton
-                buttonText="Tweet"
-                btnNext={handleNewReply}
+                buttonText="Twe589et"
+                btnNext={handleNewTweet}
                 customCss={style.button}
               />
             </div>
@@ -132,4 +145,4 @@ function TweetReplay() {
     </>
   );
 }
-export default TweetReplay;
+export default TweetReply;

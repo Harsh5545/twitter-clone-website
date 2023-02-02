@@ -30,16 +30,22 @@ export const userTweetProfile = atom({
   default: {},
 });
 
-export const userProfileTweet = atom({
-  key: "userProfileTweet",
+export const Personaltweet = atom({
+  key: "Personaltweet",
   default: [],
 });
 
-export const userProfileComment = atom({
-  key: "userProfileComment",
-  default: [],
+export const isTweetreply = atom({
+  key: "isTweetreply",
+  default: 0,
 });
-export const requestedProfileAtom = atom({
-  key: "requestedProfile",
-  default:null
-})
+
+export const Tweetreply = atom({
+  key: "Tweetreply",
+  default: {},
+});
+
+export const forPassingId = atom({
+  key: "Passid",
+  default: 1,
+});
