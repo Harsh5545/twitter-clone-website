@@ -23,6 +23,8 @@ import { tweetPosts } from "../../ConstData/ConstData";
 export default function TwitterPost() {
   const [post, setPost] = useState(tweetPosts);
   const nevigate = useNavigate();
+  const [countForRender, setCountForRender] = useState(0);
+
   const [newPost, setNewPost] = useRecoilState(isTweetPost);
   const [newProfile, setNewProfile] = useRecoilState(userProfile);
   const [likesCount, setLikesCount] = useState(1000);
@@ -31,12 +33,22 @@ export default function TwitterPost() {
   const [isOpen, SetisOpen] = useState(false);
   // const setRequestedProfile = useRecoilState(requestedProfileAtom)
 
-  function handleLike() {
-    likesCount === 1000 ? setLikesCount(1001) : setLikesCount(1000);
-    if (likesCount === 1000) {
-      setIcon("red");
-    } else {
-      setIcon("rgb(77, 75, 75)");
+  function handleLike(takeLikes) {
+    if (post[takeLikes.Index].inrDcr === false) {
+      post[takeLikes.Index].likesCount = takeLikes.Data + 1;
+
+      setCountForRender(countForRender + 1);
+      post[takeLikes.Index].inrDcr = true;
+      post[takeLikes.Index].color = "red";
+    }
+
+    //if(post[takeLikes.Index].inrDcr==true)
+    else {
+      post[takeLikes.Index].likesCount = takeLikes.Data - 1;
+
+      setCountForRender(countForRender + 1);
+      post[takeLikes.Index].inrDcr = false;
+      post[takeLikes.Index].color = "blue";
     }
   }
 
@@ -66,7 +78,7 @@ export default function TwitterPost() {
   // }
   return (
     <>
-      {post.map((data) => {
+      {post.map((data, i) => {
         return (
           <div className={style.wrapper}>
             <div className={style.container1}>
@@ -124,7 +136,7 @@ export default function TwitterPost() {
                     open={isOpen}
                     onClose={handleClose}
                     style={{
-                      background: "rgba(91, 112, 131, 0.8)",
+                      background: "rgba(91, 112, 131, 0.4)",
                       fontSize: "15px",
                       lineHeight: "40px",
                     }}
@@ -133,6 +145,7 @@ export default function TwitterPost() {
                   </Dialog>
                 </div>
               </div>
+
               <div className={style.icons}>
                 {data.retweetCount}
                 <SyncIcon />
@@ -144,11 +157,13 @@ export default function TwitterPost() {
                     background: "none",
                     color: " rgb(102, 102, 192)",
                   }}
-                  onClick={handleLike}
+                  onClick={() =>
+                    handleLike({ Data: data.likesCount, Index: i })
+                  }
                 >
-                  <FavoriteBorderIcon style={{ color: icon }} />
+                  <FavoriteBorderIcon style={{ color: data.color }} />
                 </p>
-                {likesCount}
+                {data.likesCount}
               </div>
               <div className={style.icons}>
                 {data.viewsCount}

@@ -6,17 +6,14 @@ import { HiOutlineGif } from "react-icons/hi2";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../Button/CustomButton";
-import ConstData from "../../ConstData/ConstData";
-import { tweetPosts } from "../../ConstData/ConstData";
 import { useRecoilState } from "recoil";
 import { isTweetPost, userProfileComment } from "../../Recoil/Atom1/Atom";
-import { Avatar } from "antd";
 
 function TweetReplay() {
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
   const [profileTweet, setProfileTweet] = useRecoilState(userProfileComment);
-  // const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
+  const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const [forTrue, setForTrue] = useState(0);
   const [storeArrayComment, setStoreArrayComment] = useState("");
   let Data = JSON.parse(localStorage.getItem("user0"));
@@ -64,10 +61,10 @@ function TweetReplay() {
       joinedDate: "22 dec 2022",
     };
 
-    tweetPosts.unshift(newObj);
+    // tweetPosts.unshift(newObj);
 
     setForTrue(forTrue + 1);
-    // setLoginStatus(loginStatus + 1);
+    setLoginStatus(loginStatus + 1);
     inputRef.current.value = "";
     setProfileTweet([...profileTweet, newObj]);
   }
