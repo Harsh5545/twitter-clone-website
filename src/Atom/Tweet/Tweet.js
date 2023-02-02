@@ -2,26 +2,27 @@ import React, { useRef, useState } from "react";
 import style from "./Tweet.module.css";
 import { FaGlobe, FaImage, FaMapMarker } from "react-icons/fa";
 import { FiCamera } from "react-icons/fi";
+import { HiOutlineGif } from "react-icons/hi2";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../Button/CustomButton";
 import ConstData from "../../ConstData/ConstData";
 import { tweetPosts } from "../../ConstData/ConstData";
 import { useRecoilState } from "recoil";
-import { isTweetPost,userProfileTweet } from "../../Recoil/Atom1/Atom";
+import { isTweetPost, userProfileTweet } from "../../Recoil/Atom1/Atom";
 import { Avatar } from "antd";
 
 function Tweet() {
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
-  const [profileTweet, setProfileTweet]= useRecoilState(userProfileTweet)
+  const [profileTweet, setProfileTweet] = useRecoilState(userProfileTweet);
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const [forTrue, setForTrue] = useState(0);
   const [storeArray, setStoreArray] = useState("");
   let Data = JSON.parse(localStorage.getItem("user0"));
   const inputRef = useRef(null);
   const Icons = [
-    { id: 0, icon: <FaGlobe /> },
+    { id: 0, icon: <HiOutlineGif /> },
     { id: 1, icon: <FaImage />, action: "pickImage" },
     { id: 2, icon: <FaMapMarker /> },
     { id: 3, icon: <FiCamera /> },
@@ -68,16 +69,24 @@ function Tweet() {
     setForTrue(forTrue + 1);
     setLoginStatus(loginStatus + 1);
     inputRef.current.value = "";
-    setProfileTweet([...profileTweet, newObj])
+    setProfileTweet([...profileTweet, newObj]);
+  }
+  function handleClose() {
+    setIsOpen(false);
   }
 
   return (
     <>
       <div className={style.parentContainer}>
         <div className={style.main}>
+          <CustomButton
+            buttonText="X"
+            customCss={style.btnClose}
+            btnNext={handleClose}
+            
+          />
           {/* <button onClick={Handleclose}>X</button> */}
           <div className={style.wrapper}>
-            <Avatar></Avatar>
             <textarea
               placeholder="What's happening?........"
               rows={8}
@@ -97,22 +106,23 @@ function Tweet() {
             <div className={style.iconscontainer}>
               {Icons.map((menu) => {
                 return (
-                  <div
-                    className={style.icons}
-                    key={menu.id}
-                    onClick={() => handleOnClickIcon(menu.action)}
-                  >
-                    <div>{menu.icon}</div>
+                  <div key={menu.id} className={style.iconsContent}>
+                    <div
+                      className={style.icons}
+                      onClick={() => handleOnClickIcon(menu.action)}
+                    >
+                      <div>{menu.icon}</div>
+                    </div>
                   </div>
                 );
               })}
+              <CustomButton
+                buttonText="Tweet"
+                btnNext={handleNewTweet}
+                customCss={style.button}
+              />
             </div>
           </div>
-          <CustomButton
-            buttonText="Tweet"
-            btnNext={handleNewTweet}
-            customCss={style.button}
-          />
         </div>
         {/* hidden input */}
         <input

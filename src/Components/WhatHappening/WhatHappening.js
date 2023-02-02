@@ -9,12 +9,13 @@ import { tweetPosts } from "../../ConstData/ConstData";
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { isTweetPost, userProfileTweet } from "../../Recoil/Atom1/Atom";
+import { Avatar } from "antd";
 
 function WhatHappening() {
   const [image, setImage] = useState("");
   const [storeArray, setStoreArray] = useState("");
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
-  const [profileTweet, setProfileTweet]= useRecoilState(userProfileTweet)
+  const [profileTweet, setProfileTweet] = useRecoilState(userProfileTweet);
   const inputRef = useRef(null);
   let Data = JSON.parse(localStorage.getItem("user0"));
   const Icons = [
@@ -59,14 +60,13 @@ function WhatHappening() {
       followings: 400,
       joinedDate: "22 dec 2022",
     };
-    
+
     tweetPosts.unshift(newObj);
-    // console.log(tweetPosts)
-    // setForTrue(forTrue+1)
+
     setLoginStatus(loginStatus + 1);
     setImage("");
     inputRef.current.value = "";
-    setProfileTweet([...profileTweet, newObj])
+    setProfileTweet([...profileTweet, newObj]);
   }
 
   return (
@@ -74,12 +74,14 @@ function WhatHappening() {
       <div className={style.parentContainer}>
         <div className={style.main}>
           <div className={style.wrapper}>
-            <textarea
-              placeholder="What's happening?"
-              rows={8}
-              cols={60}
-              onChange={takeTweet}
-            />
+            <div className={style.wrapper1}>
+              <textarea
+                placeholder="What's happening?"
+                rows={8}
+                cols={60}
+                onChange={takeTweet}
+              />
+            </div>
             <div className={style.privacy}>
               <FaGlobe />
               <span>Everyone can reply</span>
