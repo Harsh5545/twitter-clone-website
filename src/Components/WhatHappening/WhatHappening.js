@@ -6,7 +6,7 @@ import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../../Atom/Button/CustomButton";
 import { tweetPosts } from "../../ConstData/ConstData";
-import { useEffect } from "react";
+
 import { useRecoilState } from "recoil";
 
 import { isTweetPost,Personaltweet } from "../../Recoil/Atom1/Atom";
@@ -19,7 +19,7 @@ function WhatHappening() {
   const [personal, setPersonal ] = useRecoilState(Personaltweet);
   const inputRef = useRef(null);
   const disabled=(!storeArray)
-
+ 
   const Icons = [
     { id: 0, icon: <FaGlobe /> },
     { id: 1, icon: <FaImage />, action: "pickImage" },
@@ -114,7 +114,8 @@ function WhatHappening() {
           disable={disabled}
             buttonText="Tweet"
             btnNext={handleNewTweet}
-            customCss={style.button}
+                customCss={style.button}
+                disabled={disabled}
           />
             </div>
           </div>

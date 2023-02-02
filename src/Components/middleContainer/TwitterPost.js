@@ -52,7 +52,7 @@ export default function TwitterPost() {
 
       setCountForRender(countForRender + 1);
       post[takeLikes.Index].inrDcr = false;
-      post[takeLikes.Index].color = "blue";
+      post[takeLikes.Index].color = "rgb(60,60,60)";
     }
   }
 
@@ -121,7 +121,7 @@ export default function TwitterPost() {
                 <span className={style.text}>
                   <h3>
                     {data.name}
-                    <VerifiedIcon style={{ color: "blue" }} />
+                    <VerifiedIcon style={{ color: "#1D9BF0" }} />
                   </h3>
                 </span>
                 <h4>{data.handlerName}</h4>

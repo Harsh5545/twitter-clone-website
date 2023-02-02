@@ -1,9 +1,9 @@
 import React from "react";
 // import style from "../styled.module.css";
 
-function CustomButton({ type, buttonText, icon, btnNext, customCss, pitcher }) {
+function CustomButton({ type, buttonText, icon, btnNext, customCss, pitcher, disabled }) {
   return (
-    <button type={type} className={customCss} onClick={btnNext}>
+    <button type={type} disabled={disabled} className={customCss} onClick={btnNext}>
       {icon}
       {buttonText}
       {pitcher}

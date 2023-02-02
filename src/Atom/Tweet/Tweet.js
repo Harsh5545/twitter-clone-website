@@ -73,7 +73,7 @@ function Tweet() {
   function handleClose() {
     setIsOpen(false);
   }
-
+  const disabled=(!storeArray)
   return (
     <>
       <div className={style.parentContainer}>
@@ -118,6 +118,7 @@ function Tweet() {
                 buttonText="Tweet"
                 btnNext={handleNewTweet}
                 customCss={style.button}
+                disabled={disabled}
               />
             </div>
           </div>

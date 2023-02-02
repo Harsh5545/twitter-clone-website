@@ -75,8 +75,7 @@ textarea::-webkit-scrollbar{
   display: flex;
   margin-top: 0.75rem;
   flex-direction: row;
-  gap: .5rem;
- 
+  gap: .5rem; 
 }
 
 .button {
@@ -92,19 +91,20 @@ text-align: center;
   min-height:1.9rem;
   cursor: pointer;
   font-size: 1rem;
-  
+  border: none;
+  outline: none;
 }
 
-.bottom .icons {
+/* .bottom .icons {
   display: inline-flex;
   
-}
+} */
 .iconscontainer{
   z-index: 3;
   display: flex;
   gap: 1.5rem;
   display: flex;
-
+  border-top: 1px solid rgb(22, 24, 28);
   align-items: center;
   cursor: pointer;
 }
@@ -128,6 +128,7 @@ text-align: center;
   max-height: 20rem;
   overflow: auto;
   display: inline-block;
+
 }
 .imageWrapper::-webkit-scrollbar{
   display: none;

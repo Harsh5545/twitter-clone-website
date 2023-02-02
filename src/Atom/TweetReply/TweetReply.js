@@ -9,16 +9,20 @@ import CustomButton from "../Button/CustomButton";
 import ConstData from "../../ConstData/ConstData";
 import { tweetPosts } from "../../ConstData/ConstData";
 import { useRecoilState } from "recoil";
-import { isTweetPost, Personaltweet,forPassingId } from "../../Recoil/Atom1/Atom";
+import {
+  isTweetPost,
+  Personaltweet,
+  forPassingId,
+} from "../../Recoil/Atom1/Atom";
 // import { Avatar } from "antd";
 
 function TweetReply() {
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
-  const [post,setPost]=useState(tweetPosts)
-  const [profileTweet, setProfileTweet] = useRecoilState(Personaltweet)
+  const [post, setPost] = useState(tweetPosts);
+  const [profileTweet, setProfileTweet] = useRecoilState(Personaltweet);
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
-  const[index,setIndex]=useRecoilState(forPassingId)
+  const [index, setIndex] = useRecoilState(forPassingId);
   const [forTrue, setForTrue] = useState(0);
   const [storeArray, setStoreArray] = useState("");
   let Data = JSON.parse(localStorage.getItem("user0"));
@@ -50,14 +54,12 @@ function TweetReply() {
   }
   function handleNewTweet() {
     setIsOpen(true);
-    console.log(index)
-    let newObj1={
-      tweetComment:storeArray
-    }
-    post[index].tweetComment=([...post[index].tweetComment,newObj1])
-    console.log(storeArray)
-
-
+    console.log(index);
+    let newObj1 = {
+      tweetComment: storeArray,
+    };
+    post[index].tweetComment = [...post[index].tweetComment, newObj1];
+    console.log(storeArray);
 
     /*let newObj = {
       name: Data.Name,
@@ -74,11 +76,11 @@ function TweetReply() {
       joinedDate: "22 dec 2022",
     };*/
 
-   // tweetPosts.unshift(newObj);
+    // tweetPosts.unshift(newObj);
 
     //setForTrue(forTrue + 1);
     //setLoginStatus(loginStatus + 1);
-   // inputRef.current.value = "";
+    // inputRef.current.value = "";
     //setProfileTweet([...profileTweet, newObj]);
   }
   function handleClose() {
@@ -126,7 +128,7 @@ function TweetReply() {
                 );
               })}
               <CustomButton
-                buttonText="Twe589et"
+                buttonText="Reply"
                 btnNext={handleNewTweet}
                 customCss={style.button}
               />
