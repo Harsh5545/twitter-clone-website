@@ -6,7 +6,8 @@ import Home from "./Pages/Home/Home";
 import Profile from "./Pages/Profile/Profile";
 import Profile2 from "./Pages/Profile2/Profile2";
 import Tweetpage from "./Pages/Tweet/Tweetpage";
-// import WhatHappen from "./Components/WhatHappen/WhatHappen";
+
+
 function App() {
   return (
     <>

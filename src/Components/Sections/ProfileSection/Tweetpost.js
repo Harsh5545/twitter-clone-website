@@ -15,6 +15,7 @@ import { useState } from "react";
 // import CustomButton from '../../../Atom/Button/CustomButton';
 function Tweetpost() {
   const [post, setPost] = useState(tweetPosts);
+  let Data = JSON.parse(localStorage.getItem("user0"));
 
   const tweetPostData = useRecoilValue(userTweet);
   const index = useRecoilValue(forPassingId);
@@ -32,7 +33,7 @@ function Tweetpost() {
             <span className={style2.text}>
               <h3>
                 {tweetPostData.name}
-                <VerifiedIcon style={{ color: "blue" }} />
+                <VerifiedIcon style={{ color: "#1D9BF0", fontSize: "1.5rem"  }} />
               </h3>
             </span>
             <p>{tweetPostData.tweetText}</p>
@@ -80,7 +81,7 @@ function Tweetpost() {
             <span className={style2.text}>
               <h3>
                 Elon Musk
-                <VerifiedIcon style={{ color: "blue" }} />
+                <VerifiedIcon style={{color: "#1D9BF0", fontSize: "1.5rem"  }} />
               </h3>
             </span>
             <p>{tweetPostData.tweetText}</p>
@@ -122,8 +123,8 @@ function Tweetpost() {
                   <>
                     <span className={style2.text}>
                       <h3>
-                        Steve Jobs
-                        <VerifiedIcon style={{ color: "blue" }} />
+                        {Data.Name}
+                        <VerifiedIcon style={{ color: "#1D9BF0", fontSize: "1.5rem" }} />
                       </h3>
                     </span>
                     <p>{data.tweetComment}</p>
@@ -160,4 +161,3 @@ function Tweetpost() {
 }
 
 export default Tweetpost;
-  

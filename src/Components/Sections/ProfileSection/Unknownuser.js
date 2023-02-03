@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import style from "./ProfileSection.module.css";
 // import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import WestIcon from "@mui/icons-material/West";
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import {
   userProfile,
   userTweet,
-  userTweetProfile,
+  
 } from "../../../Recoil/Atom1/Atom";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { Avatar } from "@mui/material";
@@ -24,10 +24,10 @@ function ProfileSection() {
   const nevigate = useNavigate();
   const unknownProfileData = useRecoilValue(userProfile);
   const replyTweetPost = useSetRecoilState(userTweet);
-  const replyProfileDetails = useSetRecoilState(userTweetProfile);
+  // const replyProfileDetails = useSetRecoilState(userTweetProfile);
   const tweets = unknownProfileData.tweets;
 
-  const tweetsReply = unknownProfileData.tweets.TweetReplies;
+  // const tweetsReply = unknownProfileData.tweets.TweetReplies;
   console.log(tweets);
 
   function forReply(takeData) {

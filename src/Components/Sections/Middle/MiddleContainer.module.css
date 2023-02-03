@@ -5,6 +5,7 @@ width: 39.3vw
 }
 .twitterPostContainer{
     margin-top: 7.2rem;
+    border-bottom: 1px solid rgb(60, 60, 60);
     /* z-index: -2; */
 
 }
@@ -14,7 +15,6 @@ width: 39.3vw
     overflow-y: scroll;
     overflow-x: hidden;
     flex-direction: column;
-   
 }
 .main::-webkit-scrollbar{
     display: none;
