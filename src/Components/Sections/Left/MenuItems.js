@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 function LeftSec() {
   const nevigate = useNavigate();
   let Data = JSON.parse(localStorage.getItem("user0"));
-  let paramsValue=Data.Name
+  // let paramsValue=Data.Name
   const menu = [
     {
       id: 1,
@@ -35,7 +35,7 @@ function LeftSec() {
     {
       id: 7,
       icon: <BsPerson />,
-      Name: <p onClick={() => nevigate( `/Profile/${paramsValue}`)}>Profile</p>,
+      Name: <p onClick={() => nevigate("/Profile")}>Profile</p>,
     },
     { id: 8, icon: <CgMoreO />, Name: "More" },
   ];
@@ -61,7 +61,6 @@ function LeftSec() {
           <div className={style.innerContainer2}>
             <div className={style.logo}>
               <p onClick={() => nevigate("/")}>
-            
                 <FaTwitter />
               </p>
             </div>

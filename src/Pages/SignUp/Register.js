@@ -25,7 +25,7 @@ function Register() {
   const [password, setPassword] = useState("");
 
   const [data, setData] = useState([]);
-  const [incl, setIncl] = useState(0);
+  // const [incl, setIncl] = useState(0);
   const [month, setMonth] = useState("");
   const [day, setDay] = useState("");
   const [date, setDate] = useState("");
@@ -36,7 +36,13 @@ function Register() {
   const [passwordError, setPasswordError] = useState("");
   const setLoginStatus = useSetRecoilState(isLoginAtom);
   const navigate = useNavigate();
-
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      let findedAllUserDetails = JSON.parse(localStorage.getItem("user"));
+      console.log(findedAllUserDetails, "ia m all user details from reg page");
+      setData(findedAllUserDetails);
+    }
+  }, []);
   function Form() {
     Setform(true);
   }
@@ -66,7 +72,6 @@ function Register() {
   }
 
   function submitFunction() {
-    console.log(date);
     const Data = {
       Name: name,
       Phone: phone,
@@ -130,30 +135,33 @@ function Register() {
       setDobError("");
     }
 
+    // if (flag == 1) {
+    //   var flagForLs = 0;
+    //   for (let item of JSON.parse(localStorage.getItem("user"))) {
+    //     let k = item;
+
+    //     if (k.Email === email) {
+    //       flagForLs = 1;
+    //     }
+    //   }
+    //   if (flagForLs == 1) {
+    //     alert("USER Email is Already Exist");
+    //   }
+    // }
+
     if (flag == 1) {
-      var flagForLs = 0;
-      for (var i = 0; i < localStorage.length; i++) {
-        let k = JSON.parse(localStorage.getItem("user" + i));
-
-        if (k.Email === email) {
-          flagForLs = 1;
-        }
-      }
-      if (flagForLs == 1) {
-        alert("USER Email is Already Exist");
-      } else {
-      }
-    }
-
-    if (flag == 1 && flagForLs == 0) {
-      localStorage.setItem("user" + incl, JSON.stringify(Data));
-      setIncl(incl + 1);
+      // const newArray = [...data, Data];
+      // setData((prevData) => [...prevData, Data]);
+      setData(data.push(Data));
+      localStorage.setItem("user", JSON.stringify(data));
+      // setIncl(incl + 1);
       alert("USER Sucessfully Registered");
       setLoginStatus(true);
       // window.location.assign("/");
       navigate("/");
     }
   }
+  console.log(data);
   return (
     <div className={style.container}>
       <div className={style.container1}>
@@ -203,8 +211,8 @@ function Register() {
                       <Input
                         className={style.input2}
                         placeholder="Password"
-                        type="password"
                         handleOnchange={handlePassword}
+                        type={"password"}
                       />
                       <span style={{ color: "red" }}>{passwordError}</span>
                     </div>

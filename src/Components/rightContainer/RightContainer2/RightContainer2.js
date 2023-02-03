@@ -84,7 +84,9 @@ function Righthomebox2() {
                 <h3>
                   {menu.text}
                   <span style={{ color: "blue" }}> {menu.tag} </span>
-                  <VerifiedIcon style={{ color: "#1D9BF0", fontSize: "1.5rem" }} />
+                  <VerifiedIcon
+                    style={{ color: "#1D9BF0", fontSize: "1.5rem" }}
+                  />
                 </h3>
                 <h6>{menu.text2}</h6>
               </div>
@@ -94,7 +96,7 @@ function Righthomebox2() {
                   btnNext={() => handleClick(menu.id)}
                   key={menu.id}
                   customCss={style.follwButton}
-                  disabled={menu.followed}
+                  // disabled={menu.followed}
                 />
               </div>
             </div>
