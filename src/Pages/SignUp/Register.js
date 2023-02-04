@@ -6,14 +6,17 @@ import {
   isValidMobile,
   isValidString,
   isValidPassword,
+ 
+
 } from "../../helper";
 import styleDob from "../../Components/Dob/Dob.module.css";
 import Input from "../../Atom/Input/Input";
 import { Link } from "react-router-dom";
 import { Month, Date, Dayy } from "../../Components/Dob/Dob";
 import { useSetRecoilState } from "recoil";
-import { isLoginAtom } from "../../Recoil/Atom1/Atom";
+import { isLoginAtom, forLocalStorageIndex } from "../../Recoil/Atom1/Atom";
 import { useNavigate } from "react-router-dom";
+import uuid from 'react-uuid';
 
 function Register() {
   const [form, Setform] = useState(false);
@@ -25,7 +28,7 @@ function Register() {
   const [password, setPassword] = useState("");
 
   const [data, setData] = useState([]);
-  // const [incl, setIncl] = useState(0);
+  const [incl, setIncl] = useState(0);
   const [month, setMonth] = useState("");
   const [day, setDay] = useState("");
   const [date, setDate] = useState("");
@@ -36,13 +39,7 @@ function Register() {
   const [passwordError, setPasswordError] = useState("");
   const setLoginStatus = useSetRecoilState(isLoginAtom);
   const navigate = useNavigate();
-  useEffect(() => {
-    if (localStorage.getItem("user")) {
-      let findedAllUserDetails = JSON.parse(localStorage.getItem("user"));
-      console.log(findedAllUserDetails, "ia m all user details from reg page");
-      setData(findedAllUserDetails);
-    }
-  }, []);
+  const setLocalStorageIndex= useSetRecoilState(forLocalStorageIndex)
   function Form() {
     Setform(true);
   }
@@ -72,7 +69,9 @@ function Register() {
   }
 
   function submitFunction() {
+    console.log(date);
     const Data = {
+      id: uuid(2) ,
       Name: name,
       Phone: phone,
       Email: email,
@@ -135,33 +134,52 @@ function Register() {
       setDobError("");
     }
 
-    // if (flag == 1) {
-    //   var flagForLs = 0;
-    //   for (let item of JSON.parse(localStorage.getItem("user"))) {
-    //     let k = item;
-
-    //     if (k.Email === email) {
-    //       flagForLs = 1;
-    //     }
-    //   }
-    //   if (flagForLs == 1) {
-    //     alert("USER Email is Already Exist");
-    //   }
-    // }
-
     if (flag == 1) {
-      // const newArray = [...data, Data];
-      // setData((prevData) => [...prevData, Data]);
-      setData(data.push(Data));
-      localStorage.setItem("user", JSON.stringify(data));
+      var flagForLs = 0;
+     // for (var i = 0; i < localStorage.length; i++) 
+
+     if(localStorage.length!=0)
+     {
+        let k = JSON.parse(localStorage.getItem("user" ));
+        k.map((element)=>{
+        if (element.Email === email) {
+          flagForLs = 1;
+        }
+      }) }}
+      
+      if (flagForLs == 1) {
+        alert("USER Email is Already Exist");
+      } else {
+      }
+    
+
+    if (flag == 1 && flagForLs == 0)
+     {
+      data.push(Data)
+      setData([...data])
+
+      if(localStorage.length==0)
+      {
+         localStorage.setItem('user', JSON.stringify(data ));
+      }
+
+     else{
+      let oldData = JSON.parse(localStorage.getItem("user"))
+      //console.log(oldData)
+     // localStorage.setItem('user', JSON.stringify([ ...oldData, ...data ]));
+      
+      localStorage.setItem("user" , JSON.stringify([...oldData,...data]))
+     // localStorage.setItem('user', JSON.stringify(data ));
+     }
       // setIncl(incl + 1);
       alert("USER Sucessfully Registered");
       setLoginStatus(true);
       // window.location.assign("/");
       navigate("/");
+      let Data1 = JSON.parse(localStorage.getItem("user"))
+      setLocalStorageIndex(Data1.length-1)
     }
   }
-  console.log(data);
   return (
     <div className={style.container}>
       <div className={style.container1}>

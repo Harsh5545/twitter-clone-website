@@ -26,7 +26,6 @@ function DialogBox(props) {
   return (
     <Dialog onClose={handleClose} open={open}>
       <div className={style.container}>
-        <div className={style.container1}>
         <CustomButton
           buttonText="Add an existing user"
           customCss={style.button}
@@ -34,9 +33,8 @@ function DialogBox(props) {
         <CustomButton
           btnNext={handaleClick}
           buttonText="Logout"
-          customCss={style.button1}
+          customCss={style.button}
         />
-       </div>
       </div>
     </Dialog>
   );

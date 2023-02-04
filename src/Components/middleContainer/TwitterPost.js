@@ -52,7 +52,7 @@ export default function TwitterPost() {
 
       setCountForRender(countForRender + 1);
       post[takeLikes.Index].inrDcr = false;
-      post[takeLikes.Index].color = "rgb(60,60,60)";
+      post[takeLikes.Index].color = "rgb(60, 60, 60)";
     }
   }
 
@@ -74,9 +74,9 @@ export default function TwitterPost() {
     post[indexForD].isOpen = false;
     setCount(count - 1);
   };
-  useEffect(() => {
-    handleClickOpen;
-  }, [count]);
+  // useEffect(() => {
+  //   handleClickOpen;
+  // }, [count]);
 
   const handleClickOpen = (index) => {
     post[index].isOpen = true;
@@ -121,7 +121,7 @@ export default function TwitterPost() {
                 <span className={style.text}>
                   <h3>
                     {data.name}
-                    <VerifiedIcon style={{ color: "#1D9BF0" }} />
+                    <VerifiedIcon style={{ color: "blue" }} />
                   </h3>
                 </span>
                 <h4>{data.handlerName}</h4>

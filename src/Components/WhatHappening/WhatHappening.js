@@ -6,20 +6,21 @@ import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../../Atom/Button/CustomButton";
 import { tweetPosts } from "../../ConstData/ConstData";
+import { useEffect } from "react";
+import { useRecoilState,useRecoilValue } from "recoil";
 
-import { useRecoilState } from "recoil";
-
-import { isTweetPost,Personaltweet } from "../../Recoil/Atom1/Atom";
+import { isTweetPost,Personaltweet,forLocalStorageIndex } from "../../Recoil/Atom1/Atom";
 
 function WhatHappening() {
-  let Data = JSON.parse(localStorage.getItem("user0"));
+  let Data = JSON.parse(localStorage.getItem("user"));
   const [image, setImage] = useState("");
   const [storeArray, setStoreArray] = useState("");
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const [personal, setPersonal ] = useRecoilState(Personaltweet);
+  const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
   const inputRef = useRef(null);
   const disabled=(!storeArray)
- 
+
   const Icons = [
     { id: 0, icon: <FaGlobe /> },
     { id: 1, icon: <FaImage />, action: "pickImage" },
@@ -50,11 +51,11 @@ function WhatHappening() {
   }
   function handleNewTweet() {
     let newObj = {
-      name: Data.Name,
-      handlerName: Data.Email,
+      name: Data[getLocalStorageIndex].Name,
+      handlerName:  Data[getLocalStorageIndex].Email,
       organization: "United States government organization",
       tweetText: storeArray,
-      tweetPic: image,
+      tweetPic:  image,
       tweetCount: 100,
       retweetCount: 100,
       likesCount: 100,
@@ -110,16 +111,15 @@ function WhatHappening() {
                   </div>
                 );
               })}
-               <CustomButton
+                 <CustomButton
           disable={disabled}
             buttonText="Tweet"
             btnNext={handleNewTweet}
-                customCss={style.button}
-                disabled={disabled}
+            customCss={style.button}
           />
             </div>
           </div>
-         
+        
         </div>
         {/* hidden input */}
         <input

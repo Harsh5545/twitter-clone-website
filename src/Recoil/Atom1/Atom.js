@@ -1,19 +1,23 @@
 import { atom } from "recoil";
 
+
 export const isLoginAtom = atom({
   key: "isLogin",
   default: true,
 });
+
 
 export const isTweetPost = atom({
   key: "isPost",
   default: 0,
 });
 
+
 export const userProfile = atom({
   key: "userProfile",
   default: {},
 });
+
 
 export const isTweet = atom({
   key: "isTweet",
@@ -45,7 +49,14 @@ export const Tweetreply = atom({
   default: {},
 });
 
+
 export const forPassingId = atom({
   key: "Passid",
-  default: 1,
+  default:1,
 });
+
+export const forLocalStorageIndex = atom({
+  key: "Passid",
+  default:0,
+});
+

@@ -1,5 +1,5 @@
 .wrapper{
-border-bottom: 1px  rgb(60, 60, 60) solid;
+border: 1px rgb(60, 60, 60) solid;
 }
 
 .feed__header {
@@ -9,7 +9,8 @@ border-bottom: 1px  rgb(60, 60, 60) solid;
     z-index: 10;
     display: flex;
     gap: 1.5rem;
-    border-bottom: 0.5px solid var(--twitter-background);
+    border-bottom: 1px rgb(60, 60, 60) solid;
+
     padding: 0.93rem 1.25rem;
     position: sticky;
   }
@@ -55,14 +56,4 @@ border-bottom: 1px  rgb(60, 60, 60) solid;
 .textcontaint{
     padding: 1rem;
     color: white;
-}
-.textcontaint p{
-  font-size: 0.9rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-.textcontaint span{
-  display: flex;
-  gap :1rem;
-  font-family: 'Open Sans', sans-serif; 
 }

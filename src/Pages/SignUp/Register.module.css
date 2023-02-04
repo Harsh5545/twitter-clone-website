@@ -10,8 +10,7 @@
 .container1{
    
     width: 35.6rem;
-    /* height: 37.6rem; */
-    padding-bottom:1rem ;
+    height: 37.6rem;
     border-radius: 1rem;
     background-color: #000000;
     display: flex;

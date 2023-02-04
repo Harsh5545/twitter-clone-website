@@ -41,15 +41,21 @@
     background-color: #232323;
   }
 
-  .btn2{
-    color: #1da1f2;
+  .btn1{
+    color: white;
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-right: 0.5rem;
-    padding: 1rem 0.5rem;
-    cursor: pointer;
+    
   }
 
- 
+  .btn2{
+    background: none;
+    color: #1A8CD8;
+    font: 2px;
+    border: none;
+   outline: none;
+   padding: 0.5rem;
+  }

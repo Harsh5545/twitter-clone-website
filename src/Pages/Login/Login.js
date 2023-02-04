@@ -5,7 +5,7 @@ import { FaTwitter } from "react-icons/fa";
 import Input from "../../Atom/Input/Input";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
-import { isLoginAtom } from "../../Recoil/Atom1/Atom";
+import { isLoginAtom,forLocalStorageIndex } from "../../Recoil/Atom1/Atom";
 
 import { Link } from "react-router-dom";
 import { isValidLogin } from "../../helper";
@@ -17,6 +17,7 @@ function Login() {
   const [passWordValue, setPasswordValue] = useState("");
   const [localstorageKey, setLocalstorageKey] = useState();
   const [loginError, setLoginError] = useState("");
+  const setLocalstorageIndex=useSetRecoilState(forLocalStorageIndex)
   const setLoginStatus = useSetRecoilState(isLoginAtom);
   function loginValue(inputLogin) {
     setLoginV(inputLogin);
@@ -35,40 +36,59 @@ function Login() {
     }
 
     let flagForLs = 0;
-    for (var i = 0; i < localStorage.length; i++) {
-      let k = JSON.parse(localStorage.getItem("user" + i));
-    
-      if (k.Email === loginv || k.Name === loginv || k.Phone == loginv) {
-        flagForLs = 1;
-        //const store=i;
-        setLocalstorageKey(i);
+    //for (var i = 0; i < localStorage.length; i++) {
+      if(localStorage.length==0)
+      {
+        alert("LocalStorage is empty")
       }
-    }
+      else
+      {
+      let k = JSON.parse(localStorage.getItem("user"));
+      k.map((element,i)=>{
+        console.log(element.Email)
+        if (element.Email === loginv || element.Name === loginv || element.Phone == loginv) {
+          flagForLs = 1;
+          //const store=i;
+          console.log(element.Email)
+          setLocalstorageKey(i);
+          setLocalstorageIndex(i)
+        }
+
+
+      })
+      
+      }
+    //}
+    //console.log(flagForLs)
+      
+    //}
     if (flagForLs == 1 && flag == 0) {
       setNextBtn(true);
     } else if (flagForLs == 0) {
       setNextBtn(false);
       setLoginError("User Not Found");
     }
+    
   };
   const handleLogIn = () => {
  
 
     let flagForLs = 0;
-    let k = JSON.parse(localStorage.getItem("user" + localstorageKey));
-    console.log(k.password);
+    let k = JSON.parse(localStorage.getItem("user"));
+   // console.log(k.password);
+   
 
-    if (k.password === passWordValue) {
+    if (k[localstorageKey].password === passWordValue) {
       flagForLs = 1;
     }
-
+  
     if (flagForLs == 1) {
       setLoginStatus(true);
       alert("succesfully login");
       
       nevigate("/");
     } else {
-      alert("wrong Password");
+      alert("false");
     }
   };
 
@@ -85,8 +105,8 @@ function Login() {
                   <Input
                     className={style.input2}
                     placeholder="passsword"
-                    type="password"
                     handleOnchange={passWordChangeValue}
+                    type={"password"}
                   />
                 </div>
 

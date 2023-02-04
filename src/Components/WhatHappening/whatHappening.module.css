@@ -17,7 +17,8 @@
 }
 .main {
   background-color: #000000;
-height: max-content;
+  height:max-content;
+
 
   
 }
@@ -75,7 +76,8 @@ textarea::-webkit-scrollbar{
   display: flex;
   margin-top: 0.75rem;
   flex-direction: row;
-  gap: .5rem; 
+  gap: .5rem;
+ 
 }
 
 .button {
@@ -94,17 +96,16 @@ text-align: center;
   border: none;
   outline: none;
 }
-
-/* .bottom .icons {
+.bottom .icons {
   display: inline-flex;
   
-} */
+}
 .iconscontainer{
   z-index: 3;
   display: flex;
   gap: 1.5rem;
   display: flex;
- 
+  margin-top: 12px;
   align-items: center;
   cursor: pointer;
 }
@@ -124,22 +125,12 @@ text-align: center;
   border-radius: 50%;
   transition: background 0.2s ease;
 }
+
 .imageWrapper{
   max-height: 20rem;
   overflow: auto;
   display: inline-block;
-
 }
 .imageWrapper::-webkit-scrollbar{
   display: none;
 }
-/* .backdrop-blur::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  filter: blur(5px);
-  z-index: -1;
-} */

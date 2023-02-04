@@ -1,7 +1,6 @@
 .Main{
     width: 100%; 
     display: flex;
-  
 }
 .container{
     width: 26%;
@@ -11,10 +10,11 @@
 
 .middleContainer{
     width: 40%;
-    border: 1px  rgb(60, 60, 60) solid; 
 }
 .rightContainer{
     width:34%;
     height: 100%;
-  
+}
+.main::-webkit-scrollbar{
+    display: none;
 }
