@@ -31,9 +31,9 @@ export default function TwitterPost() {
   const [indexForD, setIndexForD] = useState();
   const [newProfile, setNewProfile] = useRecoilState(userProfile);
   // const [likesCount, setLikesCount] = useState(1000);
-  const [requestedProfile, setRequestedProfile] = useState("");
-  const [icon, setIcon] = useState("rgb(77, 75, 75)");
-  const [isOpen, SetisOpen] = useState(false);
+  // const [requestedProfile, setRequestedProfile] = useState("");
+  // const [icon, setIcon] = useState("rgb(77, 75, 75)");
+  // const [isOpen, SetisOpen] = useState(false);
   const [count, setCount] = useState(0);
   // const setRequestedProfile = useRecoilState(requestedProfileAtom)
 
@@ -74,9 +74,9 @@ export default function TwitterPost() {
     post[indexForD].isOpen = false;
     setCount(count - 1);
   };
-  // useEffect(() => {
-  //   handleClickOpen;
-  // }, [count]);
+  useEffect(() => {
+    handleClickOpen;
+  }, [count]);
 
   const handleClickOpen = (index) => {
     post[index].isOpen = true;
@@ -149,7 +149,7 @@ export default function TwitterPost() {
                 {data.tweetCount}
                 <ChatBubbleOutlineIcon onClick={() => handleClickOpen(i)} />
                 <div className={style.Dialog}>
-                  {console.log(data.isOpen)}
+                  {/* {data.isOpen} */}
                   <Dialog
                     open={data.isOpen}
                     onClose={handleClose}

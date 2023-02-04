@@ -6,7 +6,7 @@ import CustomButton from "../../../Atom/Button/CustomButton";
 import { useNavigate } from "react-router-dom";
 import { forLocalStorageIndex } from "../../../Recoil/Atom1/Atom";
 import { useRecoilValue } from "recoil";
-
+import { VscCalendar } from "react-icons/vsc";
 function ProfileSection() {
   const nevigate = useNavigate();
   const getLocalStorageIndex = useRecoilValue(forLocalStorageIndex);
@@ -41,10 +41,29 @@ function ProfileSection() {
         </div>
 
         <div key={Data.id} className={style.textcontaint}>
-          <h4>{`${"Name:-"}${Data[getLocalStorageIndex].Name}`}</h4>
-          <h5>{`${"@"}${Data[getLocalStorageIndex].Email}`}</h5>
-          <h5>followers :- 2000</h5>
-          <h5>likesCount :- 154 likes</h5>
+          <h2>{`${Data[getLocalStorageIndex].Name}`}</h2>
+          <h4
+            style={{ color: "silver" }}
+          >{`${Data[getLocalStorageIndex].Email}`}</h4>
+          <h5 style={{ marginTop: "1rem", fontSize: "1.2rem" }}>
+            I got here by being me, so I'll continue being me.
+          </h5>
+          <h5
+            style={{
+              color: "silver",
+              marginTop: "1rem",
+              fontSize: "1rem",
+              paddingBottom: "0.5rem",
+            }}
+          >
+            <VscCalendar />
+            Joined Feb 2023
+          </h5>
+          <div className={style.followerscont}>
+      
+            1550<span className={style.followers}> Followers</span> 15{" "}
+            <span className={style.followers}>Following</span>
+          </div>
         </div>
       </div>
       <UserTweet />
