@@ -5,23 +5,20 @@ import React from "react";
 import { useSetRecoilState } from "recoil";
 import { isLoginAtom } from "../../Recoil/Atom1/Atom";
 
-
 function DialogBox(props) {
-  
-
   const setLoginStatus = useSetRecoilState(isLoginAtom);
-  const { onClose, selectedValue, open } = props;
+  const { onClose, selectedValue,open} = props;
   const handleClose = () => {
     onClose(selectedValue);
   };
   function handaleClick() {
-    let text = 'Do You Logout ! \nEither Ok or Cancel';
-      if(window.confirm (text) == true){
-          setLoginStatus(false);
-    alert("successfully Logout");
-      } else {
-        text = " Cancel"
-      }
+    let text = "Do You Logout ! \nEither Ok or Cancel";
+    if (window.confirm(text) == true) {
+      setLoginStatus(false);
+      alert("successfully Logout");
+    } else {
+      text = " Cancel";
+    }
   }
   return (
     <Dialog onClose={handleClose} open={open}>

@@ -33,7 +33,7 @@ export function Month({ handleOnchange }) {
     setSelectedMonth(e.target.value);
     handleOnchange(e.target.value);
   }
-  return (
+  return (  
     <div>
       <select className={style.month} value={selectedMonth} onChange={forMonth}>
         <option value="" disabled>
@@ -91,9 +91,8 @@ export function Dayy({ handleOnchange }) {
           </option>
         ))}
       </select>
-      {/* {selectedYear && <p>Selected Year: {selectedYear}</p>} */}
+    
     </>
   );
 }
 
-//export default Dob;

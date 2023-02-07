@@ -175,7 +175,7 @@ function Register() {
       alert("USER Sucessfully Registered");
       setLoginStatus(true);
       // window.location.assign("/");
-      navigate("/");
+      navigate("/Home");
       let Data1 = JSON.parse(localStorage.getItem("user"))
       setLocalStorageIndex(Data1.length-1)
     }
@@ -264,12 +264,12 @@ function Register() {
           ) : (
             <>
               <p className={style.logo}>
-                <i class="fa fa-brands fa-twitter"></i>
+                <i className="fa fa-brands fa-twitter"></i>
               </p>
               <h1>Join Twitter today</h1>
               <div>
                 <CustomButton
-                  icon={<i class="fa fa-brands fa-google"></i>}
+                  icon={<i className="fa fa-brands fa-google"></i>}
                   buttonText="Sign in with google"
                   customCss={style.CustomButton1}
                 ></CustomButton>
@@ -277,7 +277,7 @@ function Register() {
               <br />
               <div>
                 <CustomButton
-                  icon={<i class="fa fa-brands fa-apple"></i>}
+                  icon={<i className="fa fa-brands fa-apple"></i>}
                   buttonText="Sign in with Apple"
                   customCss={style.CustomButton2}
                 />
@@ -309,4 +309,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Register;

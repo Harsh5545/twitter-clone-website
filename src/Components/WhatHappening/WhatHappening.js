@@ -7,20 +7,39 @@ import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../../Atom/Button/CustomButton";
 import { tweetPosts } from "../../ConstData/ConstData";
 import { useEffect } from "react";
-import { useRecoilState,useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 
-import { isTweetPost,Personaltweet,forLocalStorageIndex } from "../../Recoil/Atom1/Atom";
+import {
+  isTweetPost,
+  Personaltweet,
+  forLocalStorageIndex,
+} from "../../Recoil/Atom1/Atom";
 
 function WhatHappening() {
   let Data = JSON.parse(localStorage.getItem("user"));
   const [image, setImage] = useState("");
   const [storeArray, setStoreArray] = useState("");
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
-  const [personal, setPersonal ] = useRecoilState(Personaltweet);
-  const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
+  const [personal, setPersonal] = useRecoilState(Personaltweet);
+  const getLocalStorageIndex = useRecoilValue(forLocalStorageIndex);
   const inputRef = useRef(null);
-  const disabled=(!storeArray)
+  const disabled = !storeArray;
 
+  const [userDetails, setUserDetails] = useState([]);
+  // useEffect(()=>{
+  //   if(localStorage.getItem("userTweet")){
+  //     let findedAllUserDetails = JSON.parse(localStorage.getItem("userTweet"))
+  //     console.log(findedAllUserDetails , "ia m all user details from reg page")
+  //     setUserDetails(findedAllUserDetails)
+  //   }
+  // },[])
+  // useEffect(() => {
+  //   // if (Object.keys(formErrors).length === 0 && isSubmit) {
+  //     let userList =  JSON.parse(localStorage.getItem("userTweet")) || [];
+  //     userDetails.push(newObj);
+  //     localStorage.setItem("userTweet", JSON.stringify(userList));
+  //   // }
+  // }, [ userDetails]);
   const Icons = [
     { id: 0, icon: <FaGlobe /> },
     { id: 1, icon: <FaImage />, action: "pickImage" },
@@ -45,17 +64,16 @@ function WhatHappening() {
     let reader = new FileReader();
     reader.onload = (e) => {
       setImage(e.target.result);
-    
     };
     reader.readAsDataURL(e.target.files[0]);
   }
   function handleNewTweet() {
     let newObj = {
       name: Data[getLocalStorageIndex].Name,
-      handlerName:  Data[getLocalStorageIndex].Email,
+      handlerName: Data[getLocalStorageIndex].Email,
       organization: "United States government organization",
       tweetText: storeArray,
-      tweetPic:  image,
+      tweetPic: image,
       tweetCount: 100,
       retweetCount: 100,
       likesCount: 100,
@@ -64,15 +82,27 @@ function WhatHappening() {
       followings: 400,
       joinedDate: "22 dec 2022",
     };
+    let userList = JSON.parse(localStorage.getItem("userTweet")) || [];
+    setUserDetails([...userDetails, newObj]);
+    localStorage.setItem("userTweet", JSON.stringify(userDetails));
+    // userDetails.push(newObj);
+    // setUserDetails(...userDetails);
+    // let userList =  JSON.parse(localStorage.getItem("userTweet")) || [];
+    // userDetails.push(newObj);
+    //     localStorage.setItem("userTweet", JSON.stringify([...userList, newObj]));
 
     tweetPosts.unshift(newObj);
     setLoginStatus(loginStatus + 1);
     setImage("");
     setStoreArray("");
-    inputRef.current.value=""
-    setPersonal([newObj,...personal])
+    inputRef.current.value = "";
+    setPersonal([newObj, ...personal]);
   }
-
+  useEffect(() => {
+    if (localStorage.getItem("userTweet")) {
+      setUserDetails(JSON.parse(localStorage.getItem("userTweet")));
+    }
+  }, []);
   return (
     <>
       <div className={style.parentContainer}>
@@ -88,17 +118,11 @@ function WhatHappening() {
               <FaGlobe />
               <span>Everyone can reply</span>
             </div>
-            { 
-            image &&  
-            <div className={style.imageWrapper}>
-                <img
-                    src={image}
-                    height = '100%'
-                    width = '100%'
-                    alt = 'foo'
-                />
-                </div>
-            }
+            {image && (
+              <div className={style.imageWrapper}>
+                <img src={image} height="100%" width="100%" alt="foo" />
+              </div>
+            )}
             <div className={style.iconscontainer}>
               {Icons.map((menu) => {
                 return (
@@ -111,15 +135,14 @@ function WhatHappening() {
                   </div>
                 );
               })}
-                 <CustomButton
-          disable={disabled}
-            buttonText="Tweet"
-            btnNext={handleNewTweet}
-            customCss={style.button}
-          />
+              <CustomButton
+                disable={disabled}
+                buttonText="Tweet"
+                btnNext={handleNewTweet}
+                customCss={style.button}
+              />
             </div>
           </div>
-        
         </div>
         {/* hidden input */}
         <input

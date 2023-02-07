@@ -32,3 +32,8 @@ export function isValidLogin(value) {
     return true;
   }
 }
+export function isTextArea(value) {
+  if (value.length <= 5) {
+    
+  }
+}

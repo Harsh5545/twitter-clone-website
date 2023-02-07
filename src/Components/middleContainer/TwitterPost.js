@@ -15,10 +15,9 @@ import Dialog from "@mui/material/Dialog";
 import {
   isTweetPost,
   userProfile,
-  requestedProfileAtom,
   forPassingId,
 } from "../../Recoil/Atom1/Atom";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { tweetPosts } from "../../ConstData/ConstData";
 import TweetReply from "../../Atom/TweetReply/TweetReply";
 
@@ -74,15 +73,12 @@ export default function TwitterPost() {
     post[indexForD].isOpen = false;
     setCount(count - 1);
   };
-  useEffect(() => {
-    handleClickOpen;
-  }, [count]);
+  // useEffect(() => {
+  //   handleClickOpen;
+  // }, [count]);
 
   const handleClickOpen = (index) => {
     post[index].isOpen = true;
-
-    //console.log(post[index].id)
-    // console.log(index)
     setId(index);
     setCount(count + 1);
     setIndexForD(index);
@@ -92,7 +88,7 @@ export default function TwitterPost() {
     <>
       {post.map((data, i) => {
         return (
-          <div className={style.wrapper}>
+          <div className={style.wrapper} key={data.id}>
             <div className={style.container1}>
               <div
                 // onClick={handleRedirectProfile}

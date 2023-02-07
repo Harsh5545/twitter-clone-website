@@ -33,6 +33,8 @@ function Tweet() {
   function takeTweet(e) {
     setStoreArray(e.target.value);
   }
+
+  
   function handleOnClickIcon(action) {
     if (action === "pickImage") {
       inputRef.current.click();
@@ -65,6 +67,8 @@ function Tweet() {
       followings: 400,
       joinedDate: "22 dec 2022",
     };
+
+    
 
     tweetPosts.unshift(newObj);
 

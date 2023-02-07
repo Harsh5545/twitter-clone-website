@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { FaTwitter } from "react-icons/fa";
-import { FaHouseUser, FaHashtag, FaNotification } from "react-icons/fa";
-// import { GrNotification } from "react-icons/gr";
+// import {  } from "react-icons/fa";
+import { FaHouseUser, FaHashtag, FaTwitter} from "react-icons/fa";
 import { BsBookmark, BsPerson } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { TbFileText } from "react-icons/tb";
@@ -24,11 +23,11 @@ function LeftSec() {
   const nevigate = useNavigate();
   let Data = JSON.parse(localStorage.getItem("user"));
   const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
+  const paramsValue = Data[getLocalStorageIndex]?.Name;
 
-  // console.log( getLocalStorageIndex)
   
   const menu = [
-    { id: 1, icon: <FaHouseUser />, Name: <p onClick={()=> nevigate("/") }>Home</p> },
+    { id: 1, icon: <FaHouseUser />, Name: <p onClick={()=> nevigate("/Home") }>Home</p> },
     { id: 2, icon: <FaHashtag />, Name: "Explore" },
     { id: 3, icon: <VscBellDot />, Name: "Notifications" },
     { id: 4, icon: <HiOutlineMail />, Name: "Message" },
@@ -51,8 +50,7 @@ function LeftSec() {
   const handleClickClose = () => {
     setOpen(false);
   };
-  var paramsValue=Data[getLocalStorageIndex]?.Name
-  //console.log(paramsValue)
+  
   return (
     <>
       <div className={style.container}>
@@ -60,7 +58,7 @@ function LeftSec() {
           <div className={style.innerContainer2}>
             <div className={style.logo}>
              
-              <p onClick={()=> nevigate("/") }> <FaTwitter /></p>
+              <p onClick={()=> nevigate("/Home") }> <FaTwitter /></p>
             </div>
 
             {menu.map((menu,index) => {
@@ -80,6 +78,7 @@ function LeftSec() {
             />
             <div className={style.Dialog}>
               <Dialog
+                
                 open={isOpen}
                 onClose={handleClose}
                 style={{
