@@ -97,17 +97,13 @@ function handleClickOpen (index) {
   post[index].isOpen=true
    setCount(count+1)
    setNewIndex(index)
-
-  
-
-
   };
 
   return (
     <>
       {post.map((data,i) => {
         return (
-          <div className={style.wrapper}>
+          <div key={i} className={style.wrapper}>
             <div className={style.container1}>
               <div
                 // onClick={handleRedirectProfile}

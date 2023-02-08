@@ -13,12 +13,12 @@ import style from "./MenuItem.module.css";
 import Dialog from "@mui/material/Dialog";
 import { VscBellDot } from "react-icons/vsc";
 import { Avatar } from "@mui/material";
-import CustomButton2 from "../../../Atom/Button/CustomButton2";
+// import CustomButton2 from "../../../Atom/Button/CustomButton2";
 import { useNavigate } from "react-router-dom";
 import {forLocalStorageIndex} from "../../../Recoil/Atom1/Atom"
 import { useRecoilValue } from "recoil";
 import Dialog2 from "../../Dialog2/Dialog2";
-import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
+// import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import Card from "../../../Atom/Card/card";
 
 
@@ -26,8 +26,6 @@ function LeftSec() {
   const nevigate = useNavigate();
   let Data = JSON.parse(localStorage.getItem("user"));
   const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
- // console.log(Data)
-  //console.log(Data[2].Name)
   console.log( getLocalStorageIndex)
   
   const menu = [
@@ -51,11 +49,8 @@ function LeftSec() {
   const handleOpen = () => {
     setOpen(true);
   };
-  const HandleClick = () => {
-    setOpen(false);
-  };
+ 
   var paramsValue=Data[getLocalStorageIndex]?.Name
-  //console.log(paramsValue)
   return (
     <>
       <div className={style.container}>
@@ -108,21 +103,7 @@ function LeftSec() {
               button={handleOpen}
               customCss={style.button2}
             />
-            <Dialog2
-                  onClick={HandleClick}
-                  title={
-                    <div>
-                      <SentimentVeryDissatisfiedIcon /> This trend is harmful or
-                      spammy
-                    </div>
-                  }
-                  content={
-                    <p>
-                      <SentimentVeryDissatisfiedIcon />
-                      Logout
-                    </p>
-                  }
-                />
+           
           </div>
         </div>
       </div>

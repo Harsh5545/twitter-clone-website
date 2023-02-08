@@ -44,26 +44,29 @@ const Trends = () => {
     },
   ]);
   const [selectedId, setSelectedId] = useState(null);
-  const [trending , setTrendings] = useState(isNotIntrested.slice(0,2))
-  const [isShowingAllTrendings , setIsShowingAllTrendings] = useState(false)
+  const [trending , setTrendings] = useState(isNotIntrested)
+  const [isShowingAllTrendings, setIsShowingAllTrendings] = useState(false)
   const updateId = (id) => setSelectedId(id);
-
+  const[data,setData]=useState([...trending])
   const HandleClick = () => {
     const tempArr = [];
-    isNotIntrested.forEach((el) => {
+    trending.forEach((el) => {
       if (el.id !== selectedId) {
         tempArr.push(el);
       }
     });
-    setIsNotIntrested(tempArr);
+    setTrendings(tempArr);
+    setData(tempArr)
   };
+
+
 
   function handleRequestSeeAll () {
     setIsShowingAllTrendings(!isShowingAllTrendings)
     if(isShowingAllTrendings) {
-       return setTrendings(isNotIntrested.slice(0,2))
-    }
-    setTrendings(isNotIntrested)
+       return setTrendings(trending.slice(0,3))
+    }else
+    setTrendings(data)
 }
 
   return (
@@ -75,6 +78,7 @@ const Trends = () => {
         {trending.map((keyword) => {
           return (
             <div
+            key={keyword.id}
               className={style.container}
               onClick={() => {
                 updateId(keyword.id);
