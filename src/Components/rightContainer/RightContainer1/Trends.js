@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import style from "./Trends.module.css";
-
+import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import Dialog2 from "../../Dialog2/Dialog2";
 import CustomButton from "../../../Atom/Button/CustomButton";
 
@@ -90,7 +90,21 @@ const Trends = () => {
                 </div>
               </div>
               <div className={style.btn}>
-                <Dialog2 onClick={HandleClick} />
+              <Dialog2
+                  onClick={HandleClick}
+                  title={
+                    <div>
+                      <SentimentVeryDissatisfiedIcon /> This trend is harmful or
+                      spammy
+                    </div>
+                  }
+                  content={
+                    <p>
+                      <SentimentVeryDissatisfiedIcon />
+                      Is not Intrested
+                    </p>
+                  }
+                />
               </div>
             </div>
           );
