@@ -95,19 +95,19 @@ function Tweetpost() {
                 </div>
               </div>
               <div className={style2.icons}>
-                <span>
+                <span className={style2.icons}>
                   {tweetPostData.tweetCount}
                   <ChatBubbleOutlineIcon />
                 </span>
-                <span>
+                <span className={style2.icons}>
                   {tweetPostData.retweetCount}
                   <SyncIcon />
                 </span>
-                <span>
+                <span className={style2.icons}>
                   {tweetPostData.likesCount}
                   <FavoriteBorderIcon />
                 </span>
-                <span>
+                <span className={style2.icons}>
                   {tweetPostData.viewsCount}
                   <PollIcon />
                 </span>

@@ -23,8 +23,8 @@ const Dialog2 = (props) => {
         overlayInnerStyle={{
           color: "#fff",
           background: "black",
-          border: "1px solid #fff",
-          boxShadow: "0 0 10px #fff",
+          // border: "1px solid #fff",
+          boxShadow: "0 0 10px #6A6F74",
         }}
         onOpenChange={handleOpenChange}
       >

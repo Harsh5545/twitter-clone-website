@@ -57,7 +57,7 @@ export default function TwitterPost() {
      
      setCountForRender(countForRender+1)
      post[takeLikes.Index].inrDcr=false;
-     post[takeLikes.Index].color="blue"
+     post[takeLikes.Index].color="rgb(60,60,60)"
 
     }
   }
@@ -85,10 +85,6 @@ console.log(newPost)
   
   function handleClickOpen1()
   {
-    //post[newindex].isOpen=true
-    
-    //console.log(post[index].id)
-   // console.log(index)
     setId(newindex);
     setIndexForD(newindex)
   }
@@ -106,7 +102,6 @@ function handleClickOpen (index) {
           <div key={i} className={style.wrapper}>
             <div className={style.container1}>
               <div
-                // onClick={handleRedirectProfile}
                 onClick={() =>
                   xyz({
                     name: data.name,
@@ -132,7 +127,7 @@ function handleClickOpen (index) {
                 <span className={style.text}>
                   <h3>
                     {data.name}
-                    <VerifiedIcon style={{ color: "blue" }} />
+                    <VerifiedIcon style={{ color: "#1D9BF0" , width:"1rem"}} />
                   </h3>
                 </span>
                 <h4>{data.handlerName}</h4>

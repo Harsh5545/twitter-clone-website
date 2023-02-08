@@ -74,8 +74,7 @@ function forReply(takeData)
               
 
         return (
-          <>
-          
+          <>   
             <div key={x.id}>
             <div className={style2.wrapper} onClick={()=>forReply(({
 name:unknownProfileData.name,
@@ -104,7 +103,7 @@ TweetReplies:{
 
               <div className={style2.innercontainer}>
                 <span className={style2.text}>
-                  <h3>{unknownProfileData.name}<VerifiedIcon style={{color:"blue"}}/></h3>
+                  <h3>{unknownProfileData.name}<VerifiedIcon style={{color: "#1D9BF0" , width:"1rem"}}/></h3>
                 </span>
                 <p>{x.tweetText}</p>
               </div>
@@ -118,19 +117,19 @@ TweetReplies:{
               />
             </div>
             <div className={style2.icons}>
-                  <span>
+                  <span className={style2.icons}>
                     {x.tweetCount}
                     <ChatBubbleOutlineIcon />
                   </span>
-                  <span>
+                  <span className={style2.icons}>
                     {x.retweetCount}
                     <SyncIcon />
                   </span>
-                  <span>
+                  <span className={style2.icons}>
                     {x.likesCount}
                     <FavoriteBorderIcon />
                   </span>
-                  <span>
+                  <span className={style2.icons}  >
                     {x.viewsCount}
                     <PollIcon />
                   </span>

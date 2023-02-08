@@ -51,8 +51,9 @@
 
 .btn2{
     background: none;
-    color: blueviolet;
-    font: 2px;
+    color: #1D9BF0; 
+    font: 4px;
     border: none;
    outline: none;
+   padding: 0.5rem 0.4rem;
   }
