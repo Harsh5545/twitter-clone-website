@@ -9,24 +9,19 @@ import CustomButton from "../Button/CustomButton";
 import ConstData from "../../ConstData/ConstData";
 import { tweetPosts } from "../../ConstData/ConstData";
 import { useRecoilState } from "recoil";
-import { isTextArea } from "../../helper";
-import {
-  // isTweetPost,
-  // Personaltweet,
-  forPassingId,
-} from "../../Recoil/Atom1/Atom";
+import { isTweetPost, Personaltweet,forPassingId } from "../../Recoil/Atom1/Atom";
 // import { Avatar } from "antd";
 
 function TweetReply() {
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
-  const [post, setPost] = useState(tweetPosts);
-  // const [profileTweet, setProfileTweet] = useRecoilState(Personaltweet);
+  const [post,setPost]=useState(tweetPosts)
+  // const [profileTweet, setProfileTweet] = useRecoilState(Personaltweet)
   // const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
-  const [index, setIndex] = useRecoilState(forPassingId);
-  const [check, setCheck] = useState("");
+  const[index,setIndex]=useRecoilState(forPassingId)
+  // const [forTrue, setForTrue] = useState(0);
   const [storeArray, setStoreArray] = useState("");
-  let Data = JSON.parse(localStorage.getItem("user0"));
+  // let Data = JSON.parse(localStorage.getItem("user0"));
   const inputRef = useRef(null);
   const Icons = [
     { id: 0, icon: <HiOutlineGif /> },
@@ -37,18 +32,16 @@ function TweetReply() {
     { id: 5, icon: <BiUserCircle /> },
   ];
   function takeTweet(e) {
-    
-    setCheck(e.target.value);
-    
+    setStoreArray(e.target.value);
   }
   function handleOnClickIcon(action) {
     if (action === "pickImage") {
       inputRef.current.click();
     }
   }
-  const disabled = !storeArray;
+
   // Function to pick image
-  function handleOnSelectImage(e) { 
+  function handleOnSelectImage(e) {
     let reader = new FileReader();
     reader.onload = (e) => {
       setImage(e.target.result);
@@ -57,16 +50,18 @@ function TweetReply() {
   }
   function handleNewTweet() {
     setIsOpen(true);
-    // console.log(index);
-
-    if (!isTextArea(check)) {
-      let newObj1 = {
-        tweetComment: storeArray,
-      };
-
-      post[index].tweetComment = [...post[index].tweetComment, newObj1];
-      // console.log(storeArray);
+    // console.log(index)
+    let newObj1={
+      tweetComment:storeArray
     }
+    //post[index].tweetComment=([...post[index].tweetComment,newObj1])
+    // console.log(storeArray)
+    //localStorage.setItem("const tweetPosts[2].tweetComment" , "ghyy")
+   let k=JSON.parse(localStorage.getItem("constTweetPosts"))
+   console.log(k)
+   k[index].tweetComment=([...k[index].tweetComment,newObj1])
+   localStorage.setItem("constTweetPosts", JSON.stringify(k))
+
   }
   function handleClose() {
     setIsOpen(false);
@@ -81,13 +76,12 @@ function TweetReply() {
             customCss={style.btnClose}
             btnNext={handleClose}
           />
-
+        
           <div className={style.wrapper}>
             <textarea
               placeholder="What's happening?........"
               rows={8}
               cols={60}
-              // maxLength={5}
               onChange={takeTweet}
             ></textarea>
 
@@ -114,15 +108,14 @@ function TweetReply() {
                 );
               })}
               <CustomButton
-                buttonText="Reply"
+                buttonText="Reply000"
                 btnNext={handleNewTweet}
                 customCss={style.button}
-                disable={disabled}
               />
             </div>
           </div>
         </div>
-
+     
         <input
           type="file"
           hidden

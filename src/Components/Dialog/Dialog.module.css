@@ -1,8 +1,8 @@
 .button{
    
     width: 100%;
-    background-color:   #fff;
-    color: black;
+    background-color: rgb(175, 134, 134);
+    color: aliceblue;
    
     
 }
@@ -15,7 +15,7 @@
     height: 40%;
     box-sizing: 1rem;
     color: #e6ecf0;
-    padding-right:84%;
+    padding-right: 80%;
     bottom: 8rem;   
     right: 0;
     position:fixed; 

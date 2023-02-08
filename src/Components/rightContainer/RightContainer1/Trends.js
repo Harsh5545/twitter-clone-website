@@ -44,8 +44,8 @@ const Trends = () => {
     },
   ]);
   const [selectedId, setSelectedId] = useState(null);
-  const [trending, setTrendings] = useState(isNotIntrested.slice(0, 2));
-  const [isShowingAllTrendings, setIsShowingAllTrendings] = useState(false);
+  const [trending , setTrendings] = useState(isNotIntrested.slice(0,2))
+  const [isShowingAllTrendings , setIsShowingAllTrendings] = useState(false)
   const updateId = (id) => setSelectedId(id);
 
   const HandleClick = () => {
@@ -58,13 +58,13 @@ const Trends = () => {
     setIsNotIntrested(tempArr);
   };
 
-  function handleRequestSeeAll() {
-    setIsShowingAllTrendings(!isShowingAllTrendings);
-    if (isShowingAllTrendings) {
-      return setTrendings(isNotIntrested.slice(0, 2));
+  function handleRequestSeeAll () {
+    setIsShowingAllTrendings(!isShowingAllTrendings)
+    if(isShowingAllTrendings) {
+       return setTrendings(isNotIntrested.slice(0,2))
     }
     setTrendings(isNotIntrested)
-  }
+}
 
   return (
     <div className={style.keywords}>
@@ -79,7 +79,6 @@ const Trends = () => {
               onClick={() => {
                 updateId(keyword.id);
               }}
-              key={keyword.id}
             >
               <div key={keyword.id}>
                 <div className={style.country}>{keyword.country}</div>
@@ -99,7 +98,7 @@ const Trends = () => {
         <div>
           <CustomButton
             customCss={style.btn2}
-            buttonText={isShowingAllTrendings ? "Show Less" : "Show More"}
+            buttonText= {isShowingAllTrendings ? 'Show Less' : 'Show More'} 
             btnNext={handleRequestSeeAll}
           />
         </div>

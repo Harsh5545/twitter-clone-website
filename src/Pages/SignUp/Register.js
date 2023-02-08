@@ -17,6 +17,7 @@ import { useSetRecoilState } from "recoil";
 import { isLoginAtom, forLocalStorageIndex } from "../../Recoil/Atom1/Atom";
 import { useNavigate } from "react-router-dom";
 import uuid from 'react-uuid';
+import  {tweetPosts} from "../../ConstData/ConstData"
 
 function Register() {
   const [form, Setform] = useState(false);
@@ -87,25 +88,25 @@ function Register() {
       setNameError("please fill correct name input");
       //  flag = 0;
     } else {
-      // flag = 1;
+ 
       setNameError("");
     }
 
     if (toggle === true) {
       if (!isValidMobile(phone)) {
         setPhoneError("please fill correct phone input");
-        // flag = 0;
+     
       } else {
-        // flag = 1;
+ 
         setPhoneError("");
       }
     } else {
       if (!isValidEmail(email)) {
         setEmailError("please fill correct email input");
 
-        //flag = 0;
+       
       } else {
-        // flag = 1;
+     
         setEmailError("");
       }
     }
@@ -160,16 +161,20 @@ function Register() {
 
       if(localStorage.length==0)
       {
+        if(localStorage.key(1) != "constTweetData")
+        localStorage.setItem('constTweetPosts', JSON.stringify(tweetPosts ));
          localStorage.setItem('user', JSON.stringify(data ));
       }
 
      else{
       let oldData = JSON.parse(localStorage.getItem("user"))
-      //console.log(oldData)
-     // localStorage.setItem('user', JSON.stringify([ ...oldData, ...data ]));
-      
+
       localStorage.setItem("user" , JSON.stringify([...oldData,...data]))
-     // localStorage.setItem('user', JSON.stringify(data ));
+      let c=(localStorage.key(1))
+      console.log(c)
+      if(c==null)
+     localStorage.setItem('constTweetPosts', JSON.stringify(tweetPosts ));
+
      }
       // setIncl(incl + 1);
       alert("USER Sucessfully Registered");
@@ -264,12 +269,12 @@ function Register() {
           ) : (
             <>
               <p className={style.logo}>
-                <i className="fa fa-brands fa-twitter"></i>
+                <i class="fa fa-brands fa-twitter"></i>
               </p>
               <h1>Join Twitter today</h1>
               <div>
                 <CustomButton
-                  icon={<i className="fa fa-brands fa-google"></i>}
+                  icon={<i class="fa fa-brands fa-google"></i>}
                   buttonText="Sign in with google"
                   customCss={style.CustomButton1}
                 ></CustomButton>
@@ -277,7 +282,7 @@ function Register() {
               <br />
               <div>
                 <CustomButton
-                  icon={<i className="fa fa-brands fa-apple"></i>}
+                  icon={<i class="fa fa-brands fa-apple"></i>}
                   buttonText="Sign in with Apple"
                   customCss={style.CustomButton2}
                 />
@@ -309,4 +314,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Register;
