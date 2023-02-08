@@ -20,7 +20,7 @@ function DialogBox(props) {
   return (
     <div className={style.textColor}>
       <Popover
-       
+    
         content={<a onClick={props.onClick}> {props.content}</a>}
         title={
           <div style={{ color: "#fff", display: "flex", alignItems: "center" }}>
