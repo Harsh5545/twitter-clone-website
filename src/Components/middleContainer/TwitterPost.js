@@ -138,11 +138,7 @@ function handleClickOpen (index) {
             <div className={style.img}>
               {data.tweetPic ? 
               <img
-                style={{
-                  width: "30rem",
-                  height: "30rem",
-                  borderRadius: "15px",
-                }}
+              className={style.img1}
                 alt="picture"
                 src={data.tweetPic}
               /> : <></> }
@@ -153,14 +149,15 @@ function handleClickOpen (index) {
                 <ChatBubbleOutlineIcon onClick={(()=>handleClickOpen(i))} />
                 <div className={style.Dialog}>
                   {console.log(data.isOpen)}
-              <Dialog
+                  <Dialog
+                    className={style.dialogBox}
                 open={!!data?.isOpen}
                 onClose={handleClose}
-                style={{
-                  background: "rgba(91, 112, 131, 0.4)",
-                  fontSize: "15px",
-                  lineHeight: "40px",
-                }}
+                // style={{
+                //   background: "rgba(91, 112, 131, 0.4)",
+                //   fontSize: "15px",
+                //   lineHeight: "40px",
+                // }}
               >
                 <TweetReply />
               </Dialog>

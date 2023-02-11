@@ -82,7 +82,7 @@ function Tweet(props) {
         <div className={style.main}>
           <button onClick={props.onClick}>X</button>
           <div className={style.wrapper}>
-            <Avatar></Avatar>
+            {/* <Avatar></Avatar> */}
             <textarea
               placeholder="What's happening?........"
               rows={8}

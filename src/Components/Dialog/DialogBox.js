@@ -1,40 +1,40 @@
 
 import style from "./Dialog.module.css";
-import { Button, Popover } from "antd";
 import React from "react";
-
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
 import { useState } from "react";
-
-
+import Tweet from "../../Atom/Tweet/Tweet";
+import Dialog from "@mui/material/Dialog";
 function DialogBox(props) {
   
-  const [open, setOpen] = useState(false);
 
-  const handleOpenChange = (newOpen) => {
-    setOpen(newOpen);
+  const [isOpen, SetisOpen] = useState(false);
+  const handleClickOpen = () => {
+    SetisOpen(true);
+  };
+ 
+  const handleClose = () => {
+    SetisOpen(false);
   };
   return (
     <div className={style.textColor}>
-      <Popover
-    
-        content={<a onClick={props.onClick}> {props.content}</a>}
-        title={
-          <div style={{ color: "#fff", display: "flex", alignItems: "center" }}>
-            {props.title}
-          </div>
-        }
-        trigger="click"
-        open={props.open}
-        overlayInnerStyle={{
-          color: "#fff",
-          background: "black",
-          
-          boxShadow: "0 0 10px #6A6F74",
-        }}
-        onOpenChange={handleOpenChange}
-      >
-        <Button className={style.btn}>...</Button>
-      </Popover>
+     
+          <span className={style.floatIcon}>  <Fab onClick={handleClickOpen} color="primary" aria-label="add">
+                  <AddIcon />
+                   </Fab></span>
+                   <Dialog
+                open={!!isOpen}
+                onClose={handleClose}
+                style={{
+                  background: "rgba(91, 112, 131, 0.4)",
+                  fontSize: "15px",
+                  lineHeight: "40px",
+                }}
+              >
+                <Tweet onClick={handleClose}/>
+              </Dialog>
+     
     </div>
   );
 }

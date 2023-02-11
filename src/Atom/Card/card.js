@@ -27,20 +27,7 @@ function Card(props) {
   }
   return (
 <div className={style.textColor}>
-    {/* <DialogBox 
-                  // onClick={HandleClick}
-                  title={
-                    <div>
-                  This trend is harmful or
-                      spammy
-                    </div>
-                  }
-                  content={
-                    <p onClick={HandaleLogOut}>
-                      Logout
-                    </p>
-                  }
-                /> */}
+   
           <Popover
     
     content={<a onClick={HandaleLogOut}>   Logout</a>}

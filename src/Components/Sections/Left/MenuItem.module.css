@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   
-  body {
+body {
     color: #50b7f5;
     --twitter-background: #e6ecf0;
    
@@ -18,7 +18,7 @@
 
 }
 
-  .sidebarOption {
+.sidebarOption {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -31,23 +31,23 @@
   }
 
   
-  .sidebarOption h2 {
+.sidebarOption h2 {
     font-weight: 00;
     font-size: 1.641rem;
     color: rgb(231, 233, 234);
    
   }
-  .sidebarOption span{
+.sidebarOption span{
     font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 1.25rem;
     font-weight: 500;
  
     
   }
-  .container{
+.container{
     gap: 4rem;
   }
-  .sidebarOption:hover {
+.sidebarOption:hover {
     background-color: rgb(77, 75, 75);
     border-radius: 30px;
     color: white;
@@ -58,11 +58,11 @@
   position: fixed;
 }
   
-  .sidebarOptionactive {
+.sidebarOptionactive {
     color: var(--twitter-color);
   }
   
-  .sidebar__tweet {
+.sidebar__tweet {
     width: 85%;
     background-color: #1A8CD8;
     border: none;
@@ -73,16 +73,19 @@
     /* margin-top: 1.25rem;  } */
   }
   
-  .sidebar {
+.sidebar {
     color: white;
     max-width: 15.6rem;
     margin-top: 1rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* padding-left: 1.25rem;
+    padding-right: 1.25rem; */
     margin-bottom: 1rem;
   }
   
-  .fatwitter {
+.fatwitter {
     color: var(--twitter-color);
     font-size: 30px;
   }
@@ -90,7 +93,6 @@
   backdrop-filter: blur(5px);
   margin-bottom: 4rem;
 }
-
 
 .logo
 {
@@ -102,17 +104,35 @@
   margin-left: 1.01rem;
   margin-top: 0.55rem;
   border-radius: 8rem;
-  
-  
 }
 .logo:hover{
   background-color: #131E3A;
 
 }
-
+.floatIcon{
+  display: none;
+}
 @media only screen and (max-width:1280px){
   .sidebarOption span{
     display: none;
   }
+  .floatIcon{
+    display: unset;
+    justify-content: center;
+     margin-left: 1rem;
+  
+  }
+  .sidebar__tweet{
+    display: none;
+  }
  
+}
+@media only screen and (max-width:1280px){
+  .Dialog{
+    margin-bottom: 2rem;
+  }
+.sidebar{
+  display: flex;
+  justify-content: center;
+}
 }
