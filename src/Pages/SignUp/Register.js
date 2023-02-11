@@ -190,7 +190,7 @@ function Register() {
       <div className={style.container1}>
         <div className={style.mainContainer}>
           {form ? (
-            <div>
+            <div >
               <div className={style.form}>
                 <div className={style.text2} >
                   <h1 className={style.heading}>Create your account</h1>

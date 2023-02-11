@@ -22,18 +22,18 @@ function ProfileSection() {
    const nevigate = useNavigate();
    const unknownProfileData=useRecoilValue(userProfile)
    const replyTweetPost=useSetRecoilState(userTweet)
-   const replyProfileDetails=useSetRecoilState(userTweetProfile)
+  //  const replyProfileDetails=useSetRecoilState(userTweetProfile)
    const tweets = unknownProfileData.tweets
-   const [likesCount, setLikesCount] = useState(1000);
-   const [icon, setIcon] = useState("blue");
+  //  const [likesCount, setLikesCount] = useState(1000);
+  //  const [icon, setIcon] = useState("blue");
  
-   function handleLike() {
-    likesCount===1000 ? setLikesCount(1001): setLikesCount(1000)
-   if(likesCount===1000){
-     setIcon("red")
-   }else{
-     setIcon("blue")
-   }}
+  //  function handleLike() {
+  //   likesCount===1000 ? setLikesCount(1001): setLikesCount(1000)
+  //  if(likesCount===1000){
+  //    setIcon("red")
+  //  }else{
+  //    setIcon("blue")
+  //  }}
 
 
 function forReply(takeData)
@@ -93,6 +93,7 @@ TweetReplies:{
 
 
             }))}>
+          
 
             <div className={style2.container1}>
               <div >
@@ -110,8 +111,8 @@ TweetReplies:{
             </div>
 
             <div className={style2.img}>
-              <img
-                style={{ width: "30rem", height: "30rem",borderRadius:"15px" }}
+                  <img
+                     className={style2.img1}
                 alt="picture"
                 src={x.tweetPic}
               />
@@ -138,8 +139,8 @@ TweetReplies:{
                 </div>
           </div>
 
-
-            </div>
+          </div>
+       
               
           </>
                 );

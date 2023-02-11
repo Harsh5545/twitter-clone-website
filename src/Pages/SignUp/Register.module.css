@@ -46,6 +46,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.2rem;
+    text-align: left;
 }
 
 .logo{
@@ -60,29 +61,42 @@
     margin-bottom: 2rem;
 }
 .CustomButton1{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
     width: 18.62rem;
     height: 2.37rem;
-    font-size:0.875rem;
+    font-size: 1rem;
     color: #000000;
     border: none;
     outline: none;
     border-radius: 20px;
 }
 .CustomButton2{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+    font-size: 1rem;
     width: 18.62rem;
     height: 2.37rem;
     color: black;
-    font-size: 18px;
+  
     font-weight: bolder;
     border-radius: 20px;
     outline: none;
     border: none;
 }
 .CustomButton3{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+    font-size: 1rem;
   width: 18.62rem;
     height: 2.37rem;
     color: black;
-    font-size: 18px;
     font-weight: bolder;
     border-radius: 20px;
     outline: none;
@@ -97,6 +111,11 @@
     align-items: center;
 }
 .formbtn{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+    font-size: 1rem;
     width: 27.4rem;
     height: 3.12rem;
     border-radius: 1.5rem;
@@ -123,7 +142,7 @@
 }
 .toggle h6{
     height: 3rem;
-    margin-left: 18.5rem;
+    margin-left: 17.5rem;
     margin-top: -0.8rem; 
     font-size: 15px;
     cursor: pointer;
@@ -183,30 +202,36 @@ padding-left:0.5rem ;
 }
 
 @media only screen and (max-width: 768px){
-    .container{
-        margin: 0;
-        padding: 0;
-    }
+.container{
+    margin: 0;
+    padding: 0;
+}
 .container1{
     width: 100vw;
-    height: 100vh;
+    height:100vh;
     border-radius: 0;
 }
  .form{
     width: 100%;
     height:100%;
  }
-
-/* .mainContainer{
-    padding: 1rem;
-} */
-
+ .toggle h6{
+    margin-left: 14rem;
+ }
+ .para1{
+    text-align: left;
+    width: 21.125rem;      
+ }
 .input1, 
 .input2,
  .formbtn,  
-.para1, 
 .containerDob{
         width: 21.125rem;
-        text-align: center;
+}
+.mainContainer h1{
+    text-align: left;
+}
+.toggle h6{
+    margin-left: 12rem;
 }
 }

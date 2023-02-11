@@ -154,7 +154,7 @@ function handleClickOpen (index) {
                 <div className={style.Dialog}>
                   {console.log(data.isOpen)}
               <Dialog
-                open={data.isOpen}
+                open={!!data?.isOpen}
                 onClose={handleClose}
                 style={{
                   background: "rgba(91, 112, 131, 0.4)",

@@ -18,3 +18,16 @@
 .main::-webkit-scrollbar{
     display: none;
 }
+
+
+@media only screen and (max-width: 768px){
+    .rightContainer{
+        display: none;
+    }
+    .container{
+        display: none;
+    }
+    .middleContainer{
+        width: 100%;
+    }
+}

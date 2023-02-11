@@ -78,7 +78,7 @@ function LeftSec() {
             />
             <div className={style.Dialog}>
               <Dialog
-                open={isOpen}
+                open={!!isOpen}
                 onClose={handleClose}
                 style={{
                   background: "rgba(91, 112, 131, 0.4)",

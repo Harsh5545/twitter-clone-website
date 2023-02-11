@@ -108,7 +108,7 @@ function TweetReply() {
                 );
               })}
               <CustomButton
-                buttonText="Reply000"
+                buttonText="Reply "
                 btnNext={handleNewTweet}
                 customCss={style.button}
               />
