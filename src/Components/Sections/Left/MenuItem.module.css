@@ -10,10 +10,10 @@
    
   }
 .container{
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: flex-end;
-  right: 1.6rem;
+  /* right: 1.6rem; */
 
 
 }
@@ -75,7 +75,7 @@
   
   .sidebar {
     color: white;
-    min-width: 15.6rem;
+    max-width: 15.6rem;
     margin-top: 1rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -88,6 +88,7 @@
   }
 .Dialog{
   backdrop-filter: blur(5px);
+  margin-bottom: 4rem;
 }
 
 
@@ -107,4 +108,11 @@
 .logo:hover{
   background-color: #131E3A;
 
+}
+
+@media only screen and (max-width:1280px){
+  .sidebarOption span{
+    display: none;
+  }
+ 
 }

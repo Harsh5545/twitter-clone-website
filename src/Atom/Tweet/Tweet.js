@@ -11,7 +11,7 @@ import { useRecoilState ,useRecoilValue} from "recoil";
 import { isTweetPost ,Personaltweet ,forLocalStorageIndex} from "../../Recoil/Atom1/Atom";
 import { Avatar } from "antd";
 
-function Tweet() {
+function Tweet(props) {
   let Data = JSON.parse(localStorage.getItem("user"));
   const [personal, setPersonal ] = useRecoilState(Personaltweet);
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +49,7 @@ function Tweet() {
     reader.readAsDataURL(e.target.files[0]);
   }
   function handleNewTweet() {
-    setIsOpen(true);
+  
 
     let newObj = {
       name: Data[getLocalStorageIndex].Name,
@@ -66,12 +66,13 @@ function Tweet() {
       joinedDate: "22 dec 2022",
     };
 
-    tweetPosts.unshift(newObj);
+    // tweetPosts.unshift(newObj);
 
     setForTrue(forTrue + 1);
     setLoginStatus(loginStatus + 1);
     inputRef.current.value=""
     setPersonal([newObj,...personal])
+    props.handleClose()
     
   }
 
@@ -79,7 +80,7 @@ function Tweet() {
     <>
       <div className={style.parentContainer}>
         <div className={style.main}>
-          {/* <button onClick={Handleclose}>X</button> */}
+          <button onClick={props.onClick}>X</button>
           <div className={style.wrapper}>
             <Avatar></Avatar>
             <textarea
@@ -113,8 +114,9 @@ function Tweet() {
                  <CustomButton
                  disable={disabled}
             buttonText="Tweet"
-            btnNext={handleNewTweet}
+            btnNext={handleNewTweet }
             customCss={style.button}
+            
           />
             </div>
           </div>

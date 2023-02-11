@@ -2,16 +2,19 @@ import React, { useState } from 'react'
 import style from "./card.module.css"
 import { useSetRecoilState } from "recoil";
 import { isLoginAtom } from "../../Recoil/Atom1/Atom";
-import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import DialogBox from '../../Components/Dialog/DialogBox';
+import { Button, Popover } from "antd";
 function Card(props) {
   const setLoginStatus = useSetRecoilState(isLoginAtom);
-  const [open, setOpen] = useState(false);
-  // const handleOpen = () => {
-  //   setOpen(true);
+  // const [open, setOpen] = useState(false);
+
+  // const HandleClick = () => {
+  //   setOpen(false);
   // };
-  const HandleClick = () => {
-    setOpen(false);
+  const [open, setOpen] = useState(false);
+
+  const handleOpenChange = (newOpen) => {
+    setOpen(newOpen);
   };
   function HandaleLogOut() {
     let text = 'Do You Logout ! \nEither Ok or Cancel';
@@ -23,17 +26,9 @@ function Card(props) {
       }
   }
   return (
-    <div onClick={props.button} className={style.btn2container}>
-    <div>
-        {props.picture}
-    </div>
-    <div className={style.btn2text}>
-      {props.text}
-      <br />
-      {props.text2}
-    </div>
-    <DialogBox placement="leftTop"
-                  onClick={HandleClick}
+<div className={style.textColor}>
+    {/* <DialogBox 
+                  // onClick={HandleClick}
                   title={
                     <div>
                   This trend is harmful or
@@ -42,11 +37,40 @@ function Card(props) {
                   }
                   content={
                     <p onClick={HandaleLogOut}>
-           
                       Logout
                     </p>
                   }
-                />
+                /> */}
+          <Popover
+    
+    content={<a onClick={HandaleLogOut}>   Logout</a>}
+    title={
+      <div style={{ color: "#fff", display: "flex", alignItems: "center" }}>
+        This trend is harmful or
+      </div>
+    }
+    trigger="click"
+    open={props.open}
+    overlayInnerStyle={{
+      color: "#fff",
+      background: "black",
+      
+      boxShadow: "0 0 10px #6A6F74",
+    }}
+    onOpenChange={handleOpenChange}
+      >
+      <div onClick={props.button} className={style.btn2container}>
+    <div>
+        {props.picture}
+    </div>
+    <div className={style.btn2text}>
+      {props.text}
+      <br />
+      {props.text2}
+    </div>
+        <Button className={style.btn}>...</Button>
+        </div>
+  </Popover>
   </div>
 );
   

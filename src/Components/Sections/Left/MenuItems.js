@@ -46,9 +46,9 @@ function LeftSec() {
     SetisOpen(false);
   };
   const [open, setOpen] = useState(false);
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  // const handleOpen = () => {
+  //   setOpen(true);
+  // };
  
   var paramsValue=Data[getLocalStorageIndex]?.Name
   return (
@@ -86,11 +86,11 @@ function LeftSec() {
                   lineHeight: "40px",
                 }}
               >
-                <Tweet />
+                <Tweet onClick={handleClose}/>
               </Dialog>
             </div>
           </div>
-          <div>
+          <div >
             <Card
               picture={
                 <Avatar
@@ -100,7 +100,6 @@ function LeftSec() {
               }
               text={Data[getLocalStorageIndex].Name}
               text2={Data[getLocalStorageIndex].Email}
-              button={handleOpen}
               customCss={style.button2}
             />
            
